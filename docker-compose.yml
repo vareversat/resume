@@ -1,0 +1,14 @@
+version: '3'
+services:
+  frontend:
+    networks:
+      - net_app
+    image: angular_resume:latest
+    volumes:
+      - .:/myapp
+    ports:
+      - "4200:4200"
+    container_name: angular
+networks:
+  net_app:
+      driver: bridge
