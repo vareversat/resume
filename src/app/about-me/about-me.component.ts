@@ -7,7 +7,7 @@ import {JsonService} from '../json.service';
   styleUrls: ['./about-me.component.less']
 })
 export class AboutMeComponent implements OnInit {
-  public profile: any;
+  public profile: any = {};
 
   constructor(private jsonService: JsonService) {
     this.jsonService
