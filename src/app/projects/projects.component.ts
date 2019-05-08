@@ -6,7 +6,6 @@ import {
   TransitionDirection
 } from 'ng2-semantic-ui';
 import * as moment from 'moment';
-import {flatten} from '@angular/compiler';
 
 @Component({
   selector: 'app-projects',
