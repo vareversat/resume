@@ -7,7 +7,7 @@ import {JsonService} from '../json.service';
   styleUrls: ['./education.component.less']
 })
 export class EducationComponent implements OnInit {
-  private educations: any[];
+  public educations: any[];
   constructor(private jsonService: JsonService) {
     this.jsonService
       .getJSON('../../assets/data/education.json')

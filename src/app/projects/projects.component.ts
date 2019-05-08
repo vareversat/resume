@@ -15,13 +15,13 @@ import {flatten} from '@angular/compiler';
 })
 export class ProjectsComponent implements OnInit {
   public transitionController = new TransitionController();
-  private projects: any;
-  private areProjectsLoaded = false;
+  public projects: any;
+  public areProjectsLoaded = false;
   private user = 'vareversat';
   private sortBy = 'updated_at';
   private pageSize = 4;
   private projectCount: number;
-  private layout: any[] = [];
+  public layout: any[] = [];
   private currentPage = 1;
 
   constructor(private apiService: ApiService) {
