@@ -12,43 +12,28 @@
           src="../../assets/me.png"
         />
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus
-          tempor metus, in dictum ipsum placerat vitae. Donec sollicitudin
-          rhoncus nulla, a suscipit neque volutpat ac. Donec non massa tempus,
-          ullamcorper erat non, posuere dui. Maecenas at lacus ut mi lacinia
-          porttitor a id odio. Nulla commodo placerat dui, placerat rutrum metus
-          tempor et. Proin vitae tellus condimentum, blandit ligula eu,
-          scelerisque velit. Aenean sollicitudin blandit enim ut elementum. Duis
-          ut elit lacus. Sed nunc dolor, ullamcorper id blandit at, aliquet sed
-          est. Ut non tellus arcu. Fusce ac sodales lectus. Suspendisse justo
-          sapien, volutpat ac orci eget, luctus suscipit felis. Ut vel massa in
-          sem tempor feugiat. Nunc ultricies tincidunt massa eget pharetra.
-          Maecenas ac tempor felis. Nam fermentum malesuada risus, semper
-          egestas orci porttitor vel. Sed ornare, diam molestie tempus gravida,
-          neque arcu fermentum eros, id euismod ante enim non velit. Suspendisse
-          potenti. Nulla congue elit vitae scelerisque tincidunt. Vestibulum
-          suscipit, orci quis pulvinar euismod, elit sem tincidunt odio, at
-          egestas turpis massa ut massa. Morbi venenatis sodales dignissim.
-          Etiam feugiat justo non arcu ultrices, at bibendum quam vulputate.
-          Pellentesque a leo vel nibh tempus tempor. Interdum et malesuada fames
-          ac ante ipsum primis in faucibus. Duis quis purus non purus lacinia
-          malesuada non at nisl. Donec non aliquam lectus. Vivamus augue arcu,
-          condimentum eget mi vel, cursus ultricie
+          {{ profile.bio }}
         </p>
       </div>
       <div class="two wide column">
         <div class="ui vertical buttons">
-          <button class="ui fluid button whatsapp">
+          <button
+            (click)="goToURL(profile.whatsapp_link)"
+            class="ui fluid button whatsapp"
+          >
             <i class="fab fa-whatsapp"></i>
           </button>
-          <button class="ui fluid button github">
+          <button
+            (click)="goToURL(profile.github_link)"
+            class="ui fluid button github"
+          >
             <i class="fab fa-github"></i>
           </button>
-          <button class="ui fluid button linkedin">
+          <button
+            (click)="goToURL(profile.linkedin_link)"
+            class="ui fluid button linkedin"
+          >
             <i class="fab fa-linkedin-in"></i>
-          </button>
-          <button class="ui fluid button mail">
-            <i class="fas fa-envelope"></i>
           </button>
         </div>
       </div>

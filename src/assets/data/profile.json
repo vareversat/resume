@@ -1,5 +1,8 @@
 {
   "first_name": "Valentin",
   "last_name": "REVERSAT",
-  "bio": "salut à tous"
+  "bio": "salut à tous",
+  "whatsapp_link": "https://api.whatsapp.com/send?phone=33688634473&text=Hi!&source=&data=",
+  "linkedin_link": "https://www.linkedin.com/in/vareversat/",
+  "github_link": "https://github.com/vareversat"
 }
