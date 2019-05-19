@@ -1,7 +1,20 @@
 {
   "first_name": "Valentin",
   "last_name": "REVERSAT",
-  "bio": "salut à tous",
+  "age": "22",
+  "bio": "Young, dynamic and meticoulus student in a sandwich course program seeking a position as an intern during fall 2019. My studies and my work experiences in various companies and countries allow me to develop my teamwork and my adaptability skills",
+  "langages": [
+    {"lang": "French", "level": "Mother tongue"},
+    {"lang": "English", "level": "B2, professional"}
+  ],
+  "address": {
+    "number": "102 A",
+    "street": "rue de Belfort",
+    "city": "BESANCON",
+    "zip_code": "25000",
+    "country": "France"
+  },
+  "phone": "+33 6 88 63 44 73",
   "whatsapp_link": "https://api.whatsapp.com/send?phone=33688634473&text=Hi!&source=&data=",
   "linkedin_link": "https://www.linkedin.com/in/vareversat/",
   "github_link": "https://github.com/vareversat"

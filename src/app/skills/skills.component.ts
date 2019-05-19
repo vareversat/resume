@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {SuiProgressModule} from 'ng2-semantic-ui';
+import {JsonService} from '../json.service';
 
 @Component({
   selector: 'app-skills',
@@ -7,7 +7,15 @@ import {SuiProgressModule} from 'ng2-semantic-ui';
   styleUrls: ['./skills.component.less']
 })
 export class SkillsComponent implements OnInit {
-  constructor() {}
+  public skills: any[];
+
+  constructor(private jsonService: JsonService) {
+    this.jsonService
+      .getJSON('../../assets/data/skills.json')
+      .subscribe(data => {
+        this.skills = data;
+      });
+  }
 
   ngOnInit() {}
 }

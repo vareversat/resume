@@ -17,8 +17,8 @@ export class ProjectsComponent implements OnInit {
   public projects: any;
   public areProjectsLoaded = false;
   private user = 'vareversat';
-  private sortBy = 'updated_at';
-  private pageSize = 4;
+  private sortBy = 'name';
+  private pageSize = 5;
   private projectCount: number;
   public layout: any[] = [];
   private currentPage = 1;
@@ -60,20 +60,19 @@ export class ProjectsComponent implements OnInit {
   }
 
   getLayout() {
-    for (
-      let index = 0;
-      index < Math.floor(this.projectCount / this.pageSize);
-      index++
-    ) {
+    let quotient = Math.floor(this.projectCount / this.pageSize);
+    const remainder = this.projectCount % this.pageSize;
+    if (remainder !== 0) {
+      quotient += 1;
+    }
+    for (let index = 0; index < quotient; index++) {
       this.layout.push(Array(this.pageSize).fill(0));
     }
   }
 
-  public animate(transitionName: string = 'fade down') {
+  public animate(transitionName: string = 'fade up') {
     this.transitionController.animate(
-      new Transition(transitionName, 900, TransitionDirection.In, () =>
-        console.log('Completed transition.')
-      )
+      new Transition(transitionName, 900, TransitionDirection.In)
     );
   }
 

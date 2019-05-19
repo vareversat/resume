@@ -1,38 +1,36 @@
-<div class="ui segment education">
-  <h3 class="ui horizontal divider">
-    &lt;
-    <i class="graduation cap icon"></i>
-    Education >
-  </h3>
-  <div class="twelve wide column">
-    <div class="ui large steps">
-      <a
-        *ngFor="let education of educations; let i = index"
-        class="step"
-        target="_blank"
-        rel="noopener noreferrer"
-        href="{{ education.website }} "
-      >
-        <div class="content">
-          <div class="title">
-            {{ education.place }}
-            <div class="ui violet horizontal label">
-              {{ education.year_from }} - {{ education.year_to }}
-            </div>
-          </div>
-          <div class="description">
-            <h4>{{ education.diploma }} <br /></h4>
-            <i class="map pin icon"> </i>
-            {{ education.place_city }}, {{ education.place_region }},
-            {{ education.place_country }}
+<h3 class="ui horizontal divider">
+  &lt;
+  <i class="graduation cap icon"></i>
+  Education >
+</h3>
+<div class="twelve wide column">
+  <div class="ui large steps">
+    <a
+      *ngFor="let education of educations; let i = index"
+      class="step"
+      target="_blank"
+      rel="noopener noreferrer"
+      href="{{ education.website }} "
+    >
+      <div class="content">
+        <div class="title">
+          {{ education.place }}
+          <div class="ui violet horizontal label">
+            {{ education.year_from }} - {{ education.year_to }}
           </div>
         </div>
-      </a>
-    </div>
+        <div class="description">
+          <h4>{{ education.diploma }} <br /></h4>
+          <i class="map pin icon"> </i>
+          {{ education.place_city }}, {{ education.place_region }},
+          {{ education.place_country }}
+        </div>
+      </div>
+    </a>
   </div>
-  <h3 class="ui horizontal divider">
-    &lt;/
-    <i class="graduation cap icon"></i>
-    Education >
-  </h3>
 </div>
+<h3 class="ui horizontal divider">
+  &lt;/
+  <i class="graduation cap icon"></i>
+  Education >
+</h3>

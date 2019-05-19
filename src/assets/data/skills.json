@@ -1,0 +1,40 @@
+[
+  {
+    "title": "Computer languages skills",
+    "icon": "code",
+    "talents": [
+      {"name": "JAVA", "percentage": "90"},
+      {"name": "TS / JAVA Script", "percentage": "75"},
+      {"name": "C#", "percentage": "70"},
+      {"name": "Python", "percentage": "65"}
+    ]
+  },
+  {
+    "title": "Data base skills",
+    "icon": "database",
+    "talents": [
+      {"name": "Oracle SQL", "percentage": "90"},
+      {"name": "MongoDB", "percentage": "75"},
+      {"name": "MySQL", "percentage": "70"}
+    ]
+  },
+  {
+    "title": "Operating systems / virtualisation",
+    "icon": "server",
+    "talents": [
+      {"name": "Linux", "percentage": "90"},
+      {"name": "Docker", "percentage": "85"},
+      {"name": "Windows", "percentage": "60"}
+    ]
+  },
+  {
+    "title": "Interpersonnal skills",
+    "icon": "handshake",
+    "talents": [
+      {"name": "Teamwork", "percentage": "85"},
+      {"name": "Dynamic", "percentage": "85"},
+      {"name": "Consciencious", "percentage": "85"},
+      {"name": "SCRUM like method", "percentage": "85"}
+    ]
+  }
+]

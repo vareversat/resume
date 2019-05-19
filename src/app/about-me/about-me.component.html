@@ -1,47 +1,57 @@
-<div class="ui segment about-me">
-  <h3 class="ui horizontal divider">
-    <
-    <i class="hand spock icon"></i>
-    About me >
-  </h3>
-  <div class="ui stackable centered divided grid">
-    <div class="row">
-      <div class="fourteen wide column">
-        <img
-          class="ui small circular left floated image"
-          src="../../assets/me.jpeg"
-        />
-        <p>
-          {{ profile.bio }}
-        </p>
-      </div>
-      <div class="two wide column">
-        <div class="ui vertical buttons">
-          <button
-            (click)="goToURL(profile.whatsapp_link)"
-            class="ui fluid button whatsapp"
-          >
-            <i class="fab fa-whatsapp"></i>
-          </button>
-          <button
-            (click)="goToURL(profile.github_link)"
-            class="ui fluid button github"
-          >
-            <i class="fab fa-github"></i>
-          </button>
-          <button
-            (click)="goToURL(profile.linkedin_link)"
-            class="ui fluid button linkedin"
-          >
-            <i class="fab fa-linkedin-in"></i>
-          </button>
+<h3 class="ui horizontal divider">
+  <
+  <i class="hand spock icon"></i>
+  About me >
+</h3>
+<div class="ui stackable centered divided grid">
+  <div class="row">
+    <div class="thirteen wide column">
+      <img
+        [suiTransition]="transitionController"
+        class="ui medium circular left floated image"
+        src="../../assets/me.jpeg"
+      />
+      <h1 class="ui header">
+        <div class="content">
+          {{ profile.first_name }} {{ profile.last_name }}
+          <div class="sub header">{{ profile.age }} years old</div>
         </div>
+      </h1>
+      <p>
+        {{ profile.bio }}
+      </p>
+      <div class="address">
+        <i class="home icon"></i>
+        {{ profile.address.number }}
+        {{ profile.address.street }}, {{ profile.address.city }},
+        {{ profile.address.country }}
+      </div>
+      <div class="phone">
+        <i class="phone icon"></i>
+        {{ profile.phone }}
+      </div>
+      <div class="ui buttons">
+        <button
+          (click)="goToURL(profile.whatsapp_link)"
+          class="ui green button"
+        >
+          <i class="fab fa-whatsapp"></i>
+        </button>
+        <button (click)="goToURL(profile.github_link)" class="ui black button">
+          <i class="fab fa-github"></i>
+        </button>
+        <button
+          (click)="goToURL(profile.linkedin_link)"
+          class="ui linkedin button"
+        >
+          <i class="fab fa-linkedin-in"></i>
+        </button>
       </div>
     </div>
   </div>
-  <h3 class="ui horizontal divider">
-    &lt;/
-    <i class="hand spock icon"></i>
-    About me >
-  </h3>
 </div>
+<h3 class="ui horizontal divider">
+  &lt;/
+  <i class="hand spock icon"></i>
+  About me >
+</h3>
