@@ -3,7 +3,7 @@ services:
   frontend:
     networks:
       - net_app
-    image: angular_resume:latest
+    build: .
     volumes:
       - .:/myapp
     ports:
