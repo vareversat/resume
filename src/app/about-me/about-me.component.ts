@@ -12,7 +12,8 @@ import {
   styleUrls: ['./about-me.component.less']
 })
 export class AboutMeComponent implements OnInit {
-  public transitionController = new TransitionController();
+  public imageTransition = new TransitionController();
+  public buttonsTransition = new TransitionController();
   public profile: any = {};
 
   constructor(private jsonService: JsonService) {
@@ -23,9 +24,12 @@ export class AboutMeComponent implements OnInit {
       });
   }
 
-  public animate(transitionName: string = 'fade down') {
-    this.transitionController.animate(
-      new Transition(transitionName, 900, TransitionDirection.In)
+  public animate() {
+    this.imageTransition.animate(
+      new Transition('fade down', 900, TransitionDirection.In)
+    );
+    this.buttonsTransition.animate(
+      new Transition('fade left', 900, TransitionDirection.In)
     );
   }
 
