@@ -13,7 +13,7 @@ import {
 })
 export class SkillsComponent implements OnInit {
   public skills: any[];
-  public transitionController = new TransitionController()
+  public transitionController = new TransitionController();
 
   constructor(private jsonService: JsonService) {
     this.jsonService
@@ -30,6 +30,6 @@ export class SkillsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.animate()
+    this.animate();
   }
 }
