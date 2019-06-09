@@ -1,31 +1,20 @@
-<div class="ui top fixed  menu">
-  <a class="item" (click)="sidebar.toggle()">
-    <i class="sidebar icon"></i> Menu
-  </a>
-</div>
-<sui-sidebar-container class="ui segment">
-  <sui-sidebar
-    class="ui inverted labeled icon left inline vertical sidebar menu uncover visible"
-    #sidebar
-  >
-    <a class="item" routerLink="/about-me" (click)="sidebar.close()">
-      <i class="hand spock icon"></i>
-      About me
+<div>
+  <div class="ui top fixed inverted menu">
+    <a class="item" routerLink="/about-me">
+      V-REVERSAT
     </a>
-    <a class="item" routerLink="/education" (click)="sidebar.close()">
+    <a class="item" routerLink="/education">
       <i class="graduation cap icon"></i>
       Education
     </a>
-    <a class="item" routerLink="/skills" (click)="sidebar.close()">
+    <a class="item" routerLink="/skills">
       <i class="star icon"></i>
       Skills
     </a>
-    <a class="item" routerLink="/projects" (click)="sidebar.close()">
+    <a class="item" routerLink="/projects">
       <i class="tasks icon"></i>
       Projects
     </a>
-  </sui-sidebar>
-  <sui-sidebar-sibling [isDimmedWhenVisible]="true">
-    <router-outlet> </router-outlet>
-  </sui-sidebar-sibling>
-</sui-sidebar-container>
+  </div>
+  <router-outlet> </router-outlet>
+</div>

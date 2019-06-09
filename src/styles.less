@@ -1,9 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('../src/assets/Semantic-UI-CSS-master/semantic.css');
+@import (css) url(https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap);
 @import url('https://use.fontawesome.com/releases/v5.8.1/css/all.css');
+@import url('../src/assets/Semantic-UI-CSS-master/semantic.css');
 
 @orange : #f2711c;
 @grey : #A0A0A0;
+@font : 'Montserrat';
 
 .ui.segment {
   margin-top: 1.5em !important;
@@ -13,5 +15,17 @@
 }
 
 body {
-  background-color: @grey;
+  font-family: @font;
+  background-repeat:no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size:cover;
+  background-image: linear-gradient(
+    to right top,
+    #051937,
+    #004d7a,
+    #008793,
+    #00bf72,
+    #a8eb12
+  );
 }

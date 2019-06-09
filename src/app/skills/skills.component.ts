@@ -1,5 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {JsonService} from '../json.service';
+import {
+  TransitionController,
+  Transition,
+  TransitionDirection
+} from 'ng2-semantic-ui';
 
 @Component({
   selector: 'app-skills',
@@ -8,6 +13,7 @@ import {JsonService} from '../json.service';
 })
 export class SkillsComponent implements OnInit {
   public skills: any[];
+  public transitionController = new TransitionController()
 
   constructor(private jsonService: JsonService) {
     this.jsonService
@@ -17,5 +23,13 @@ export class SkillsComponent implements OnInit {
       });
   }
 
-  ngOnInit() {}
+  public animate() {
+    this.transitionController.animate(
+      new Transition('scale', 900, TransitionDirection.In)
+    );
+  }
+
+  ngOnInit() {
+    this.animate()
+  }
 }
