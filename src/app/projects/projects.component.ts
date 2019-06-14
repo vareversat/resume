@@ -6,6 +6,7 @@ import {
   TransitionDirection
 } from 'ng2-semantic-ui';
 import * as moment from 'moment';
+import { SuiDropdownModule } from 'ng2-semantic-ui';
 
 @Component({
   selector: 'app-projects',
@@ -52,6 +53,19 @@ export class ProjectsComponent implements OnInit {
         this.projects = projects;
         this.animate();
         this.areProjectsLoaded = true;
+      });
+  }
+
+  async getUsersOfProject(projectName: string) {
+    const test = await this.apiService
+      .getOnUrl(
+        'https://api.github.com/repos/' +
+          this.user +
+          '/' +
+          projectName +
+          '/assignees'
+      ).subscribe(user => {
+        return user;
       });
   }
 

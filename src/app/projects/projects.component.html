@@ -1,77 +1,32 @@
-<h3 class="ui horizontal divider">
-  &lt;
-  <i class="tasks icon"></i>
-  Projects
-  <i *ngIf="!areProjectsLoaded" class="notched circle loading icon"></i> >
-</h3>
-<div
-  class="ui five column centered stackable grid"
-  [suiTransition]="transitionController"
->
-  <div *ngFor="let project of projects; let i = index" class="column">
-    <a
-      class="ui fluid card"
-      target="_blank"
-      rel="noopener noreferrer"
-      href="{{ project.html_url }} "
-    >
+<div class="projects">
+  <div *ngIf="!areProjectsLoaded" class="ui active centered inline huge loader"></div>
+  <div *ngIf="areProjectsLoaded" class="ui items" [suiTransition]="transitionController">
+    <div *ngFor="let project of projects; let i = index" class="project item">
       <div class="content">
-        <div class="header">
-          {{ project.name }}
-          <span class="right floated">
-            <div
-              *ngIf="!project.language"
-              class="ui top right attached green label"
-            >
-              Conf
-            </div>
-            <div
-              *ngIf="project.language"
-              class="ui top right attached green label"
-            >
-              {{ project.language }}
-            </div>
-          </span>
+        <a class="header" target="_blank" rel="noopener noreferrer" href="{{ project.html_url }} ">
+          <h1><i class="fitted icon chevron right"></i>{{ project.name }}</h1>
+        </a>
+        <div class="meta">
+
         </div>
         <div class="description">
-          {{ project.description }}
+          <p>{{ project.description }}</p>
         </div>
-      </div>
-      <div class="extra content">
-        <span class="left floated like">
-          <i class="calendar icon"></i>
-          {{ formatDate(project.created_at) }}
-        </span>
-        <div class="right floated author">
-          <a
-            class="ui yellow image label"
-            target="_blank"
-            rel="noopener noreferrer"
-            href="{{ project.owner.html_url }} "
-          >
-            <img src="{{ project.owner.avatar_url }}" />
-            {{ project.owner.login }}
+        <div class="extra">
+          <a class="ui purple label language">
+            <p *ngIf="!project.language">Conf</p>
+            <p *ngIf="project.language">{{ project.language }}</p>
           </a>
         </div>
       </div>
-    </a>
+    </div>
+  </div>
+  <div class="ui one column centered grid">
+    <div class="ui pagination inverted menu">
+      <a (click)="setPage(i + 1)" *ngFor="let page of layout; let i = index" class="item"
+        [ngClass]="{active: i === currentPage - 1}">
+        {{ i + 1 }}
+      </a>
+    </div>
   </div>
 </div>
-<div class="ui one column centered grid">
-  <div class="ui pagination menu">
-    <a
-      (click)="setPage(i + 1)"
-      *ngFor="let page of layout; let i = index"
-      class="item"
-      [ngClass]="{active: i === currentPage - 1}"
-    >
-      {{ i + 1 }}
-    </a>
-  </div>
-</div>
-<h3 class="ui horizontal divider">
-  &lt;/
-  <i class="tasks icon"></i>
-  Projects
-  <i *ngIf="!areProjectsLoaded" class="notched circle loading icon"></i> >
-</h3>

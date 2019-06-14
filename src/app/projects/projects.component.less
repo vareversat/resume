@@ -1,4 +1,50 @@
-.ui.pagination.menu {
-  margin-bottom: 1.2em;
-  padding: 0;
+ @import url('../../styles.less');
+
+.projects{
+  background-color: transparent;
+  padding-top: 10em;
+  padding-left: 3em;
+  padding-right: 3em;
+
+  .project.item {
+    padding-bottom: 30px !important;
+  }
+
+  .ui.pagination.menu {
+    margin-bottom: 1.2em;
+    padding: 0;
+  }
+
+  .ui.purple.label.language {
+    cursor: default;
+  }
+
+  .ui.active.centered.inline.loader {
+    box-sizing: initial;
+    font-size: 3em;
+  }
+
+  .fitted.icon.chevron.right {
+    font-size: 0.7em;
+    padding-right: 0.4em;
+  }
+
+  .ui.pagination.menu {
+    position: fixed;
+    top: calc(100vh - 80px);
+    font-family: @font;
+  }
+
+  p {
+    font-size: 1.8em;
+    color: white;
+  }
+
+  h1 {
+    font-size: 2.5em;
+    padding: 0 0.2em;
+    background-color: #1B1C1D;
+    color: white;
+    font-family: @font;
+  }
 }
