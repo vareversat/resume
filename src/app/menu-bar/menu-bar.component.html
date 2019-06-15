@@ -1,0 +1,18 @@
+<div class="menu-bar">
+  <div class="ui inverted segment">
+    <div class="ui inverted menu">
+      <a suiPopup popupText="Bio" popupInverted [popupPlacement]="bottom" (click)="setPage('about-me')" class="item" routerLink="/about-me" [ngClass]="{active: selectedPage === 'about-me'}">
+        V-REVERSAT
+      </a>
+      <a suiPopup popupText="My education" popupInverted [popupPlacement]="bottom" (click)="setPage('education')" class="item" routerLink="/education" [ngClass]="{active: selectedPage === 'education'}">
+        <i class="graduation cap icon"></i>
+      </a>
+      <a suiPopup popupText="My skills" popupInverted [popupPlacement]="bottom" (click)="setPage('skills')" class="item" routerLink="/skills" [ngClass]="{active: selectedPage === 'skills'}">
+        <i class="star icon"></i>
+      </a>
+      <a suiPopup popupText="My projects" popupInverted [popupPlacement]="bottom" (click)="setPage('projects')" class="item" routerLink="/projects" [ngClass]="{active: selectedPage === 'projects'}">
+        <i class="tasks icon"></i>
+      </a>
+    </div>
+  </div>
+</div>

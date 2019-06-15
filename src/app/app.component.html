@@ -1,19 +1,4 @@
 <div class="app-component">
-  <div class="ui inverted segment">
-     <div class="ui inverted menu">
-       <a (click)="setPage('about-me')" class="item" routerLink="/about-me" [ngClass]="{active: selectedPage === 'about-me'}">
-         V-REVERSAT
-       </a>
-       <a (click)="setPage('education')" class="item" routerLink="/education" [ngClass]="{active: selectedPage === 'education'}">
-         <i class="graduation cap icon"></i>
-       </a>
-       <a (click)="setPage('skills')" class="item" routerLink="/skills" [ngClass]="{active: selectedPage === 'skills'}">
-         <i class="star icon"></i>
-       </a>
-       <a (click)="setPage('projects')" class="item" routerLink="/projects" [ngClass]="{active: selectedPage === 'projects'}">
-         <i class="tasks icon"></i>
-       </a>
-     </div>
-   </div>
-   <router-outlet> </router-outlet>
+  <app-menu-bar></app-menu-bar>
+  <router-outlet></router-outlet>
 </div>

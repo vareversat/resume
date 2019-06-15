@@ -7,10 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'resume';
-  selectedPage: string;
-
-  setPage(page: string) {
-    this.selectedPage = page;
-  }
 
 }

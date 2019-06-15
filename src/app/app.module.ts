@@ -8,6 +8,7 @@ import {EducationComponent} from './education/education.component';
 import {ProjectsComponent} from './projects/projects.component';
 import {SkillsComponent} from './skills/skills.component';
 import {SuiModule} from 'ng2-semantic-ui';
+import { MenuBarComponent } from './menu-bar/menu-bar.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import {SuiModule} from 'ng2-semantic-ui';
     AboutMeComponent,
     EducationComponent,
     ProjectsComponent,
-    SkillsComponent
+    SkillsComponent,
+    MenuBarComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, SuiModule],
   providers: [],
