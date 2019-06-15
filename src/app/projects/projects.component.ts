@@ -6,7 +6,6 @@ import {
   TransitionDirection
 } from 'ng2-semantic-ui';
 import * as moment from 'moment';
-import { SuiDropdownModule } from 'ng2-semantic-ui';
 
 @Component({
   selector: 'app-projects',

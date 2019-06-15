@@ -3,8 +3,8 @@
     "title": "Computer languages skills",
     "icon": "code",
     "talents": [
-      {"name": "JAVA", "percentage": "90"},
-      {"name": "TS / JAVA Script", "percentage": "75"},
+      {"name": "Java", "percentage": "90"},
+      {"name": "TypeScript / JavaScript", "percentage": "75"},
       {"name": "C#", "percentage": "70"},
       {"name": "Python", "percentage": "65"}
     ]
@@ -19,7 +19,7 @@
     ]
   },
   {
-    "title": "Operating systems / virtualisation",
+    "title": "Operating systems / virtualisation skills",
     "icon": "server",
     "talents": [
       {"name": "Linux", "percentage": "90"},

@@ -23,9 +23,9 @@ export class SkillsComponent implements OnInit {
       });
   }
 
-  public animate() {
+  public animate(transitionName: string = 'scale') {
     this.transitionController.animate(
-      new Transition('scale', 900, TransitionDirection.In)
+      new Transition(transitionName, 900, TransitionDirection.In)
     );
   }
 
