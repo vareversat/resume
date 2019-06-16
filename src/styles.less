@@ -14,10 +14,18 @@
 }
 
 body {
+  height:100%;
+  overflow: auto;
+   -webkit-overflow-scrolling: touch;
   font-family: @font;
   background-repeat:no-repeat;
   background-position: center;
   background-attachment: fixed;
   background-size:cover;
   background-image: linear-gradient(to right top, #051937, #5b2c5f, #b13d61, #e96f42, #ebbc12);
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
 }
