@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { IPopup } from 'ng2-semantic-ui';
 
 @Component({
   selector: 'app-menu-bar',
@@ -8,7 +7,7 @@ import { IPopup } from 'ng2-semantic-ui';
 })
 export class MenuBarComponent implements OnInit {
 
-  selectedPage: string;
+  selectedPage = 'about-me';
   constructor() { }
 
   setPage(page: string) {
