@@ -20,7 +20,7 @@
   },
   {
     "title": "Operating systems / virtualisation skills",
-    "icon": "server",
+    "icon": "desktop",
     "talents": [
       {"name": "Linux", "percentage": "90"},
       {"name": "Docker", "percentage": "85"},
@@ -29,7 +29,7 @@
   },
   {
     "title": "Interpersonnal skills",
-    "icon": "handshake",
+    "icon": "users",
     "talents": [
       {"name": "Teamwork", "percentage": "85"},
       {"name": "Dynamic", "percentage": "85"},

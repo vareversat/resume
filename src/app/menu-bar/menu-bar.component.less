@@ -4,11 +4,20 @@
   .ui.inverted.segment {
     z-index: 100;
     position: fixed;
-    top: 5px;
+    top: 2%;
+    left: 1.5em;
 
     .item {
       font-family: @font;
       font-weight: bold;
+    }
+    .ui.inverted.menu {
+      .item:last-child {
+        border-radius: 0 .28571429rem .28571429rem 0;
+      }
+      .item:last-child:before {
+        background: transparent;
+      }
     }
   }
 }
