@@ -1,0 +1,42 @@
+[
+  {
+    "place": "Besançon",
+    "country": "France",
+    "company_name": "SKINSoft",
+    "company_description": "Little company located in the East of France specialized in the development of full web solutions for collections management",
+    "missions": [
+      {
+        "name": "System administrtor",
+        "from": "apr. 2018",
+        "to": "today",
+        "description": "In charge of the management, the monitoring and installation of the servers and the virtual machines for our clients"
+      },
+      {
+        "name": "Fullstack developer",
+        "from": "sept. 2018",
+        "to": "today",
+        "description": "Project : Implementation in the current application of a history procedure of the users changes in items records using a REST API (on my GitHub)\nBackend stack :\n- Java (Spring) / MongoDB / ElasticSearch / Docker\nFrontend stack : \n- JavaScript (VueJS) / TypeScript / HTML / CSS"
+      },
+      {
+        "name": "IT engineer",
+        "from": "sept. 2018",
+        "to": "today",
+        "description": "Sandwich course program with the UTBM "
+      }
+    ]
+  },
+  {
+    "place": "Guangzhou City",
+    "country": "China",
+    "company_name": "广州安方生物科技有限公司 (Guangzhou Anfang Biotechnology Co., Ltd)",
+    "company_description": "Company located in the North East of Guangzhou specialized in the conception and development of 'nano filters' used to filter the cancer cells form the blood",
+    "missions": [
+      {
+        "name": "Intern developer",
+        "from": "may 2018",
+        "to": "jul. 2018",
+        "description": "Development in C ++ of an analysis application of captured images using a microscope. Image processing using the OpenCV library.\nMissions:\n- Rebuild an image of a sample present on a microscope slide\n- Extracting usable data for laboratory technicians\n- Realization of documentation"
+      }
+    ]
+  }
+]

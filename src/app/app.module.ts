@@ -10,6 +10,7 @@ import {SkillsComponent} from './skills/skills.component';
 import {SuiModule} from 'ng2-semantic-ui';
 import { MenuBarComponent } from './menu-bar/menu-bar.component';
 import { FooterComponent } from './footer/footer.component';
+import { WorkComponent } from './work/work.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FooterComponent } from './footer/footer.component';
     ProjectsComponent,
     SkillsComponent,
     MenuBarComponent,
-    FooterComponent
+    FooterComponent,
+    WorkComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, SuiModule],
   providers: [],

@@ -1,0 +1,31 @@
+<div class="works" [suiTransition]="transitionController">
+  <div class="ui middle aligned stackable three column centered grid">
+      <div *ngFor="let work of works; let i = index" class="row">
+          <div class="column">
+            <h1 class="ui center aligned header">
+              {{ work.company_name }}
+            </h1>
+            <p class="location">
+                <i class="map pin icon"></i>
+                {{ work.place }}, {{ work.country}}
+            </p>
+            <p>{{work.company_description}}</p>
+          </div>
+          <div class="column">
+            <div class="mission" *ngFor="let mission of work.missions; let i = index">
+              <h2 class="ui header">{{ mission.name }}
+              </h2>
+              <div class="description">
+                <p>
+                  {{ mission.description }}
+                </p>
+                <div class="ui violet horizontal label">
+                  {{ mission.from }} - {{ mission.to }}
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+  </div>
+
+</div>
