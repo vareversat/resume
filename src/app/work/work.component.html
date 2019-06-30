@@ -19,8 +19,9 @@
                 <p>
                   {{ mission.description }}
                 </p>
-                <div class="ui violet horizontal label">
-                  {{ mission.from }} - {{ mission.to }}
+                <div *ngFor="let period of mission.periods; let i = index" class="ui large purple label">
+                  {{ period.from }}
+                  <div *ngIf="period.to" class="detail">{{ period.to }}</div>
                 </div>
               </div>
             </div>

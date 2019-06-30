@@ -13,9 +13,14 @@
           <p>{{ project.description }}</p>
         </div>
         <div class="extra">
-          <a class="ui purple label language">
-            <p *ngIf="!project.language">Conf</p>
-            <p *ngIf="project.language">{{ project.language }}</p>
+          <div *ngFor="let language of project.languages; let i = index" class="ui large purple label">
+            {{ language.language }}
+            <div class="detail">{{ language.distribution }}%</div>
+          </div>
+          <br>
+          <a target="_blank" rel="noopener noreferrer" href="{{ user.html_url }} " *ngFor="let user of project.users; let i = index" class="ui large orange image label">
+            <img src="{{ user.avatar_url }}">
+              {{ user.login }}
           </a>
         </div>
       </div>

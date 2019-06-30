@@ -2,17 +2,21 @@
 
 .projects{
 
+  h2 {
+    padding: 0 0.2em;
+    background-color: @black;
+  }
+
   .project.item {
     padding-bottom: 30px !important;
   }
 
   .ui.pagination.menu {
+    position: fixed;
+    top: calc(100vh - 7%);
+    font-family: @font;
     margin-bottom: 1.2em;
     padding: 0;
-  }
-
-  .ui.purple.label.language {
-    cursor: default;
   }
 
   .ui.active.centered.inline.loader {
@@ -25,14 +29,4 @@
     padding-right: 0.4em;
   }
 
-  .ui.pagination.menu {
-    position: fixed;
-    top: calc(100vh - 7%);
-    font-family: @font;
-  }
-
-  h2 {
-    padding: 0 0.2em;
-    background-color: @black;
-  }
 }

@@ -6,6 +6,7 @@ import {
   TransitionDirection
 } from 'ng2-semantic-ui';
 import * as moment from 'moment';
+import * as _ from 'lodash';
 
 @Component({
   selector: 'app-projects',
@@ -27,8 +28,33 @@ export class ProjectsComponent implements OnInit {
     this.apiService = apiService;
   }
 
-  getProjectsCount() {
-    this.apiService
+  async getLanguages(project: any) {
+    await this.apiService
+      .getOnUrl(
+        'https://api.github.com/repos/' +
+          this.user +
+          '/' +
+          project.name +
+          '/languages'
+      )
+      .subscribe(languages => {
+        _.set(project, 'languages', this.getLanguagesDistribution(languages));
+      });
+  }
+
+  getLanguagesDistribution(languages: any) {
+    const dists = [];
+    const langs = _.keys(languages);
+    const values = _.values(languages);
+    const total = _.sum(values);
+    for (let index = 0; index < langs.length; index++) {
+      dists.push({language: langs[index], distribution: _.round((values[index] * 100) / total, 2)});
+    }
+    return dists;
+  }
+
+  async getProjectsCount() {
+    await this.apiService
       .getOnUrl('https://api.github.com/users/' + this.user)
       .subscribe((user: any) => {
         this.projectCount = user.public_repos;
@@ -36,8 +62,8 @@ export class ProjectsComponent implements OnInit {
       });
   }
 
-  getProjects(page: number): void {
-    this.apiService
+  async getProjects(page: number) {
+    await this.apiService
       .getOnUrl(
         'https://api.github.com/users/' +
           this.user +
@@ -50,21 +76,26 @@ export class ProjectsComponent implements OnInit {
       )
       .subscribe(projects => {
         this.projects = projects;
+        for (const project of this.projects) {
+          this.getLanguages(project);
+          this.getUsersOfProject(project);
+          console.log(project);
+        }
         this.animate();
         this.areProjectsLoaded = true;
       });
   }
 
-  async getUsersOfProject(projectName: string) {
-    const test = await this.apiService
+  async getUsersOfProject(project: any) {
+    await this.apiService
       .getOnUrl(
         'https://api.github.com/repos/' +
           this.user +
           '/' +
-          projectName +
+          project.name +
           '/assignees'
-      ).subscribe(user => {
-        return user;
+      ).subscribe(users => {
+        _.set(project, 'users', users);
       });
   }
 

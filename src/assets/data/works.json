@@ -7,20 +7,17 @@
     "missions": [
       {
         "name": "System administrtor",
-        "from": "apr. 2018",
-        "to": "today",
+        "periods": [{"from": "apr. 2018", "to": "today"}],
         "description": "In charge of the management, the monitoring and installation of the servers and the virtual machines for our clients"
       },
       {
         "name": "Fullstack developer",
-        "from": "sept. 2018",
-        "to": "today",
+        "periods": [{"from": "sept. 2018", "to": "today"}],
         "description": "Project : Implementation in the current application of a history procedure of the users changes in items records using a REST API (on my GitHub)\nBackend stack :\n- Java (Spring) / MongoDB / ElasticSearch / Docker\nFrontend stack : \n- JavaScript (VueJS) / TypeScript / HTML / CSS"
       },
       {
         "name": "IT engineer",
-        "from": "sept. 2018",
-        "to": "today",
+        "periods": [{"from": "sept. 2018", "to": "today"}],
         "description": "Sandwich course program with the UTBM "
       }
     ]
@@ -33,9 +30,21 @@
     "missions": [
       {
         "name": "Intern developer",
-        "from": "may 2018",
-        "to": "jul. 2018",
+        "periods": [{"from": "may 2018", "to": "jul. 2018"}],
         "description": "Development in C ++ of an analysis application of captured images using a microscope. Image processing using the OpenCV library.\nMissions:\n- Rebuild an image of a sample present on a microscope slide\n- Extracting usable data for laboratory technicians\n- Realization of documentation"
+      }
+    ]
+  },
+  {
+    "place": "Meyrueis",
+    "country": "France",
+    "company_name": "SAS Marinico",
+    "company_description": "Little restaurant located in the south of France",
+    "missions": [
+      {
+        "name": "Seasonnal worker",
+        "periods": [{"from": "summer 2013"}, {"from": "summer 2014"}, {"from": "summer 2015"}, {"from": "summer 2016"}, {"from": "summer 2017"}, {"from": "summer 2018"}],
+        "description": "Kitchen clerk during the summers 2013 to 2018. Missions: - Management of fresh products - Dressing plates This experience allowed me to apprehend the realization of tasks with very tight 'dead line' without sacrificing the quality of my work. Being able to be independent and to be a force of proposal are qualities that I have developed during these six seasons spent in the kitchen"
       }
     ]
   }
