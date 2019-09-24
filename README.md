@@ -1,3 +1,4 @@
+[![CircleCI](https://circleci.com/gh/vareversat/resume.svg?style=svg)](https://circleci.com/gh/vareversat/resume)
 # Resume
 
 # Prerequisites
