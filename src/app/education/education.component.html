@@ -5,9 +5,6 @@
           <div class="ui header">
               <h1>{{ education.diploma }}</h1>
           </div>
-          <div class="ui large violet label">
-              {{ education.year_from }} - {{ education.year_to }}
-          </div>
           <div>
             <a class="place" target="_blank" rel="noopener noreferrer" href="{{ education.website }} ">
               <h2>{{ education.place }}</h2>
@@ -16,7 +13,11 @@
               <i class="map pin icon"></i>
               {{ education.place_city }}, {{ education.place_region }},
               {{ education.place_country }}
+
             </p>
+            <div class="ui large violet label">
+              {{ education.year_from }} - {{ education.year_to }}
+          </div>
           </div>
       </div>
 
