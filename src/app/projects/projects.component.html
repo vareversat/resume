@@ -28,8 +28,7 @@
   </div>
   <div class="ui one column centered grid">
     <div class="ui pagination inverted menu">
-      <a (click)="setPage(i + 1)" *ngFor="let page of layout; let i = index" class="item"
-        [ngClass]="{active: i === currentPage - 1}">
+      <a (click)="setPage(i + 1)" *ngFor="let page of layout; let i = index" class="item" [ngClass]="{active: i === currentPage - 1}">
         {{ i + 1 }}
       </a>
     </div>
