@@ -79,7 +79,6 @@ export class ProjectsComponent implements OnInit {
         for (const project of this.projects) {
           this.getLanguages(project);
           this.getUsersOfProject(project);
-          console.log(project);
         }
         this.animate();
         this.areProjectsLoaded = true;
