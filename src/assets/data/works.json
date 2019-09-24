@@ -6,7 +6,7 @@
     "company_description": "Little company located in the East of France specialized in the development of full web solutions for collections management",
     "missions": [
       {
-        "name": "System administrtor",
+        "name": "System administrator",
         "periods": [{"from": "apr. 2018", "to": "today"}],
         "description": "In charge of the management, the monitoring and installation of the servers and the virtual machines for our clients"
       },
@@ -43,7 +43,7 @@
     "missions": [
       {
         "name": "Seasonnal worker",
-        "periods": [{"from": "summer 2013"}, {"from": "summer 2014"}, {"from": "summer 2015"}, {"from": "summer 2016"}, {"from": "summer 2017"}, {"from": "summer 2018"}],
+        "periods": [{"from": "summer 2013"}, {"from": "summer 2014"}, {"from": "summer 2015"}, {"from": "summer 2016"}, {"from": "summer 2017"}, {"from": "summer 2018"}, {"from": "summer 2019"}],
         "description": "Kitchen clerk during the summers 2013 to 2018. Missions: - Management of fresh products - Dressing plates This experience allowed me to apprehend the realization of tasks with very tight 'dead line' without sacrificing the quality of my work. Being able to be independent and to be a force of proposal are qualities that I have developed during these six seasons spent in the kitchen"
       }
     ]
