@@ -21,7 +21,7 @@
   },
   {
     "title": "Operating systems / virtualisation skills",
-    "icon": "fa microship",
+    "icon": "desktop",
     "talents": [
       {"name": "Linux", "percentage": "90"},
       {"name": "Docker", "percentage": "85"},
