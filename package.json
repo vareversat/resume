@@ -22,7 +22,7 @@
     "core-js": "^2.6.9",
     "gulp-print": "^5.0.2",
     "karma": "^4.1.0",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.13",
     "moment": "^2.24.0",
     "ng2-semantic-ui": "^0.9.7",
     "rxjs": "~6.3.3",
