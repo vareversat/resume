@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, LOCALE_ID, Inject } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'resume';
+  languageList = [
+    { code: 'en', label: 'English' },
+    { code: 'fr', label: 'Français' }];
+
+  constructor(@Inject(LOCALE_ID) protected localeId: string) { }
 
 }

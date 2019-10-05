@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="b5b89c1c7143be99e1792ec5c378f3dbc22bf78f" datatype="html">
+        <source>{selectedPage, select, about-me {About me} education {Education} projects {Projects} skills {Skills} work-experiences {Work experiences} }</source>
+        <target>{selectedPage, select, about-me {Moi} education {Scolarité} projects {Projets} skills {Compétences} work-experience {Expériences} }</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/menu-bar/menu-bar.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
