@@ -24,10 +24,10 @@ jobs:
             - ./node_modules
       - run:
           name: Lauch integration tests
-          command: $CIRCLE_WORKING_DIRECTORY/node_modules/.bin/ng test
+          command: ./node_modules/.bin/ng test
       - run:
           name: Build for production
-          command: $CIRCLE_WORKING_DIRECTORY/node_modules/.bin/ng build --prod
+          command: ./node_modules/.bin/ng build --prod
       - run:
           name: Netlify Deploy
-          command: $CIRCLE_WORKING_DIRECTORY/node_modules/.bin/netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --prod --dir=dist/resume
+          command: ./node_modules/.bin/netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --prod --dir=dist/resume
