@@ -12,11 +12,17 @@ jobs:
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
       - run:
-          name: Install npm wee
+          name: Install npm
           command: npm install
       - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
             - node_modules
       - run:
-          xvfb-run -a ng test
+          name: Install chromium
+          command: 'sudo apt install chromium'
+      - run:
+          name: Set chromium ENV
+          command: 'export CHROME_BIN=/usr/bin/chromium'
+      - run:
+          xvfb-run -a npm test
