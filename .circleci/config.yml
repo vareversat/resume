@@ -13,9 +13,6 @@ jobs:
       - run:
           name: Install chromium
           command: 'sudo apt install chromium'
-      - run:
-          name: Override PATH
-          command: 'export PATH=$CIRCLE_WORKING_DIRECTORY/node_modules/.bin:$PATH'
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
       - run:
@@ -27,10 +24,10 @@ jobs:
             - ./node_modules
       - run:
           name: Lauch integration tests
-          command: ng test
+          command: $CIRCLE_WORKING_DIRECTORY/node_modules/.bin/ng test
       - run:
           name: Build for production
-          command: ng build --prod
+          command: $CIRCLE_WORKING_DIRECTORY/node_modules/.bin/ng build --prod
       - run:
           name: Netlify Deploy
-          command: netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --prod --dir=dist/resume
+          command: $CIRCLE_WORKING_DIRECTORY/node_modules/.bin/netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --prod --dir=dist/resume
