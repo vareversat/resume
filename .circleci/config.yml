@@ -9,6 +9,9 @@ jobs:
       - run:
           name: Install npm
           command: 'sudo npm install'
+      - run:
+          name: Install npm
+          command: 'sudo npm install netlify-cli'
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
       - run:
