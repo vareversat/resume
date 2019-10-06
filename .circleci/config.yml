@@ -13,7 +13,7 @@ jobs:
           key: dependency-cache-{{ checksum "package.json" }}
       - run:
           name: Rebuild npm
-          command: npm rebuild
+          command: npm update
       - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
@@ -25,7 +25,7 @@ jobs:
           name: Set chromium ENV
           command: 'export CHROME_BIN=/usr/bin/chromium'
       - run:
-          name: Lauch intration tests
+          name: Lauch integration tests
           command: xvfb-run -a npm test
       - run:
           name: Netlify Deploy
