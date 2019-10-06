@@ -5,7 +5,6 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:language-bundles": "ng build --configuration=production-fr && ng build --configuration=production-en",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

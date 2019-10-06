@@ -1,10 +1,5 @@
 <div class="app-component">
   <app-menu-bar></app-menu-bar>
-  <ng-container *ngFor="let language of languageList">
-    <a href="/{{language.code}}/">
-      <button class="button">{{language.label}}</button>
-    </a>
-  </ng-container>
   <div class="data">
     <router-outlet></router-outlet>
   </div>
