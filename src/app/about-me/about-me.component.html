@@ -2,7 +2,11 @@
   <div class="ui stackable centered divided grid">
     <div class="row">
       <div class="thirteen wide column">
-        <img [suiTransition]="imageTransition" class="ui medium circular left floated image" src="../../assets/me.jpeg" />
+        <img
+          [suiTransition]="imageTransition"
+          class="ui medium circular left floated image"
+          src="../../assets/me.jpeg"
+        />
         <h1 class="ui header">
           <div class="content">
             {{ profile.first_name }} {{ profile.last_name }}
@@ -12,16 +16,17 @@
         <p>
           {{ profile.bio }}
         </p>
-        <div
-        [suiTransition]="buttonsTransition"
-        class="ui buttons">
+        <div [suiTransition]="buttonsTransition" class="ui buttons">
           <button
             (click)="goToURL(profile.whatsapp_link)"
             class="ui green button"
           >
             <i class="fab fa-whatsapp"></i>
           </button>
-          <button (click)="goToURL(profile.github_link)" class="ui black button">
+          <button
+            (click)="goToURL(profile.github_link)"
+            class="ui black button"
+          >
             <i class="fab fa-github"></i>
           </button>
           <button

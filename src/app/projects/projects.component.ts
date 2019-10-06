@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {ApiService} from '../api.service';
+import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 import {
   TransitionController,
   Transition,
@@ -24,9 +24,7 @@ export class ProjectsComponent implements OnInit {
   public layout: any[] = [];
   private currentPage = 1;
 
-  constructor(private apiService: ApiService) {
-    this.apiService = apiService;
-  }
+  constructor(private apiService: ApiService) {}
 
   async getLanguages(project: any) {
     await this.apiService
@@ -48,7 +46,10 @@ export class ProjectsComponent implements OnInit {
     const values = _.values(languages);
     const total = _.sum(values);
     for (let index = 0; index < langs.length; index++) {
-      dists.push({language: langs[index], distribution: _.round((values[index] * 100) / total, 2)});
+      dists.push({
+        language: langs[index],
+        distribution: _.round((values[index] * 100) / total, 2)
+      });
     }
     return dists;
   }
@@ -93,7 +94,8 @@ export class ProjectsComponent implements OnInit {
           '/' +
           project.name +
           '/assignees'
-      ).subscribe(users => {
+      )
+      .subscribe(users => {
         _.set(project, 'users', users);
       });
   }

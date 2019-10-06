@@ -1,26 +1,35 @@
 <div class="education">
-  <div class="ui stackable centered grid" [suiTransition]="transitionController">
-    <div *ngFor="let education of educations; let i = index" class="sixteen wide column">
+  <div
+    class="ui stackable centered grid"
+    [suiTransition]="transitionController"
+  >
+    <div
+      *ngFor="let education of educations; let i = index"
+      class="sixteen wide column"
+    >
       <div class="row">
-          <div class="ui header">
-              <h1>{{ education.diploma }}</h1>
+        <div class="ui header">
+          <h1>{{ education.diploma }}</h1>
+        </div>
+        <div>
+          <a
+            class="place"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="{{ education.website }} "
+          >
+            <h2>{{ education.place }}</h2>
+          </a>
+          <p>
+            <i class="map pin icon"></i>
+            {{ education.place_city }}, {{ education.place_region }},
+            {{ education.place_country }}
+          </p>
+          <div class="ui large violet label">
+            {{ education.year_from }} - {{ education.year_to }}
           </div>
-          <div>
-            <a class="place" target="_blank" rel="noopener noreferrer" href="{{ education.website }} ">
-              <h2>{{ education.place }}</h2>
-            </a>
-            <p>
-              <i class="map pin icon"></i>
-              {{ education.place_city }}, {{ education.place_region }},
-              {{ education.place_country }}
-
-            </p>
-            <div class="ui large violet label">
-              {{ education.year_from }} - {{ education.year_to }}
-          </div>
-          </div>
+        </div>
       </div>
-
     </div>
   </div>
 </div>

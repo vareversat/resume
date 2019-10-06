@@ -1,24 +1,24 @@
 <div class="skills" [suiTransition]="transitionController">
-    <div *ngFor="let skill of skills; let i = index">
-      <div class="ui stackable centered divided grid">
-        <div class="five wide column">
-          <h2 class="ui center aligned icon header">
-            <i ngClass="circular inverted {{ skill.icon }} icon"></i>
-            {{ skill.title }}
-          </h2>
-        </div>
-        <div class="eight wide column">
-          <div *ngFor="let talent of skill.talents; let i = index">
-            <h3 class="ui header">{{ talent.name }}</h3>
-            <sui-progress
-              class="tiny indicating"
-              [value]="talent.percentage"
-              [maximum]="100"
-              [showProgress]="false"
-            >
-            </sui-progress>
-          </div>
+  <div *ngFor="let skill of skills; let i = index">
+    <div class="ui stackable centered divided grid">
+      <div class="five wide column">
+        <h2 class="ui center aligned icon header">
+          <i ngClass="circular inverted {{ skill.icon }} icon"></i>
+          {{ skill.title }}
+        </h2>
+      </div>
+      <div class="eight wide column">
+        <div *ngFor="let talent of skill.talents; let i = index">
+          <h3 class="ui header">{{ talent.name }}</h3>
+          <sui-progress
+            class="tiny indicating"
+            [value]="talent.percentage"
+            [maximum]="100"
+            [showProgress]="false"
+          >
+          </sui-progress>
         </div>
       </div>
     </div>
+  </div>
 </div>

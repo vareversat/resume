@@ -1,26 +1,45 @@
 <div class="projects">
-  <div *ngIf="!areProjectsLoaded" class="ui active centered inline huge loader"></div>
-  <div *ngIf="areProjectsLoaded" class="ui items" [suiTransition]="transitionController">
+  <div
+    *ngIf="!areProjectsLoaded"
+    class="ui active centered inline huge loader"
+  ></div>
+  <div
+    *ngIf="areProjectsLoaded"
+    class="ui items"
+    [suiTransition]="transitionController"
+  >
     <div *ngFor="let project of projects; let i = index" class="project item">
       <div class="content">
-        <a class="header" target="_blank" rel="noopener noreferrer" href="{{ project.html_url }} ">
+        <a
+          class="header"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="{{ project.html_url }} "
+        >
           <h2><i class="fitted icon chevron right"></i>{{ project.name }}</h2>
         </a>
-        <div class="meta">
-
-        </div>
+        <div class="meta"></div>
         <div class="description">
           <p>{{ project.description }}</p>
         </div>
         <div class="extra">
-          <div *ngFor="let language of project.languages; let i = index" class="ui large purple label">
+          <div
+            *ngFor="let language of project.languages; let i = index"
+            class="ui large purple label"
+          >
             {{ language.language }}
             <div class="detail">{{ language.distribution }}%</div>
           </div>
-          <br>
-          <a target="_blank" rel="noopener noreferrer" href="{{ user.html_url }} " *ngFor="let user of project.users; let i = index" class="ui large orange image label">
-            <img src="{{ user.avatar_url }}">
-              {{ user.login }}
+          <br />
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="{{ user.html_url }} "
+            *ngFor="let user of project.users; let i = index"
+            class="ui large orange image label"
+          >
+            <img src="{{ user.avatar_url }}" />
+            {{ user.login }}
           </a>
         </div>
       </div>
@@ -28,7 +47,12 @@
   </div>
   <div class="ui one column centered grid">
     <div class="ui pagination inverted menu">
-      <a (click)="setPage(i + 1)" *ngFor="let page of layout; let i = index" class="item" [ngClass]="{active: i === currentPage - 1}">
+      <a
+        (click)="setPage(i + 1)"
+        *ngFor="let page of layout; let i = index"
+        class="item"
+        [ngClass]="{ active: i === currentPage - 1 }"
+      >
         {{ i + 1 }}
       </a>
     </div>

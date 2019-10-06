@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {JsonService} from '../json.service';
+import { Component, OnInit } from '@angular/core';
+import { JsonService } from '../json.service';
 import {
   TransitionController,
   Transition,

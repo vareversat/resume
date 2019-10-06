@@ -16,9 +16,7 @@ export class WorkComponent implements OnInit {
   public works: any[];
 
   constructor(private jsonService: JsonService) {
-    this.jsonService
-    .getJSON('../../assets/data/works.json')
-    .subscribe(data => {
+    this.jsonService.getJSON('../../assets/data/works.json').subscribe(data => {
       this.works = data;
     });
   }
@@ -32,5 +30,4 @@ export class WorkComponent implements OnInit {
   ngOnInit() {
     this.animate();
   }
-
 }

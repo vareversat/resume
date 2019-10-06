@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {JsonService} from '../json.service';
+import { Component, OnInit } from '@angular/core';
+import { JsonService } from '../json.service';
 import {
   TransitionController,
   Transition,
@@ -15,13 +15,7 @@ export class SkillsComponent implements OnInit {
   public skills: any[];
   public transitionController = new TransitionController();
 
-  constructor(private jsonService: JsonService) {
-    this.jsonService
-      .getJSON('../../assets/data/skills.json')
-      .subscribe(data => {
-        this.skills = data;
-      });
-  }
+  constructor(private jsonService: JsonService) {}
 
   public animate(transitionName: string = 'scale') {
     this.transitionController.animate(
@@ -29,7 +23,16 @@ export class SkillsComponent implements OnInit {
     );
   }
 
+  getSkills() {
+    this.jsonService
+      .getJSON('../../assets/data/skills.json')
+      .subscribe(data => {
+        this.skills = data;
+      });
+  }
+
   ngOnInit() {
     this.animate();
+    this.getSkills();
   }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import * as _ from 'lodash';
 
 @Component({
   selector: 'app-menu-bar',
@@ -7,14 +8,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./menu-bar.component.less']
 })
 export class MenuBarComponent implements OnInit {
-
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+    this.router = router;
+  }
 
   get selectedPage() {
-    return this.router.url.replace('/', '');
+    if (!_.isUndefined(this.router.url)) {
+      return this.router.url.replace('/', '');
+    }
   }
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

@@ -8,6 +8,7 @@ services:
       - .:/myapp
     ports:
       - "4200:4200"
+      - "9333:9333"
     container_name: angular
 networks:
   net_app:
