@@ -9,17 +9,11 @@ jobs:
       - run:
           name: Install npm
           command: 'sudo npm install'
-      - run:
-          name: Install npm
-          command: 'sudo npm install netlify-cli'
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
       - run:
           name: Update npm
           command: sudo npm update
-      - run:
-          name: Rebuild npm
-          command: sudo npm rebuild
       - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
@@ -35,7 +29,7 @@ jobs:
           command: xvfb-run -a npm test
       - run:
           name: Build for production
-          command: xvfb-run -a npm build --prod
+          command: npm build
       - run:
           name: Netlify Deploy
           command: ./node_modules/.bin/netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --prod --dir=dist/resume
