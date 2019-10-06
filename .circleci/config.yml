@@ -34,5 +34,8 @@ jobs:
           name: Lauch integration tests
           command: xvfb-run -a npm test
       - run:
+          name: Build for production
+          command: xvfb-run -a npm build --prod
+      - run:
           name: Netlify Deploy
           command: ./node_modules/.bin/netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --prod --dir=dist/resume
