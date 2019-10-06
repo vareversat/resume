@@ -9,6 +9,15 @@ jobs:
       - run:
           name: Install npm
           command: 'sudo npm install'
+      - run:
+          name: Install chromium
+          command: 'sudo apt install chromium'
+      - run:
+          name: Set chromium ENV
+          command: 'export CHROME_BIN=/usr/bin/chromium'
+      - run:
+          name: Set PATH
+          command: 'export /myapp/node_modules/.bin:$PATH'
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
       - run:
@@ -19,17 +28,11 @@ jobs:
           paths:
             - node_modules
       - run:
-          name: Install chromium
-          command: 'sudo apt install chromium'
-      - run:
-          name: Set chromium ENV
-          command: 'export CHROME_BIN=/usr/bin/chromium'
-      - run:
           name: Lauch integration tests
-          command: xvfb-run -a npm test
+          command: ng test
       - run:
           name: Build for production
-          command: xvfb-run -a npm build-prod
+          command: ng build --prod
       - run:
           name: Netlify Deploy
-          command: ./node_modules/.bin/netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --prod --dir=dist/resume
+          command: netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --prod --dir=dist/resume
