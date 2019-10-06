@@ -26,6 +26,7 @@
     "karma-spec-reporter": "0.0.32",
     "lodash": "^4.17.13",
     "moment": "^2.24.0",
+    "netlify-cli": "^2.15.0",
     "ng2-semantic-ui": "^0.9.7",
     "rxjs": "~6.3.3",
     "ts-mockito": "^2.5.0",
