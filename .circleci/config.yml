@@ -32,4 +32,4 @@ jobs:
           command: xvfb-run -a npm test
       - run:
           name: Netlify Deploy
-          command: sudo netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --prod --dir=dist/resume
+          command: xvfb-run -a netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --prod --dir=dist/resume
