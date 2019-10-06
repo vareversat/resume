@@ -4,15 +4,12 @@ jobs:
     environment:
       CHROME_BIN: /usr/bin/chromium
     docker:
-      - image: circleci/node:8-browsers
+      - image: vareversat/angular:latest
     steps:
       - checkout
       - run:
           name: Install npm
           command: 'sudo npm install'
-      - run:
-          name: Install chromium
-          command: 'sudo apt install chromium'
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
       - save_cache:
@@ -21,10 +18,10 @@ jobs:
             - ./node_modules
       - run:
           name: Lauch integration tests
-          command: ./node_modules/.bin/ng test
+          command: ng test
       - run:
           name: Build for production
-          command: ./node_modules/.bin/ng build --prod
+          command: ng build --prod
       - run:
           name: Netlify Deploy
-          command: ./node_modules/.bin/netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --prod --dir=dist/resume
+          command: netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --prod --dir=dist/resume
