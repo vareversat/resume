@@ -1,4 +1,4 @@
-image: registry.gitlab.dev-o-sud.fr/public-devosud/docker-images/docken
+image: registry.gitlab.dev-o-sud.fr/public-devosud/docker-images/nodejs
 
 cache:
   untracked: true
