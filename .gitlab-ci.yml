@@ -1,0 +1,40 @@
+image: registry.gitlab.dev-o-sud.fr/public-devosud/docker-images/docken
+
+cache:
+  untracked: true
+  paths:
+    - node_modules/
+
+stages:
+  - build
+  - deploy
+
+
+build:
+  stage: build
+  script:
+    - npm install
+    - ng build --prod
+  only:
+    - master
+  tags:
+    - nodeJS
+
+test:
+  stage: test
+  script:
+    - ng test
+  only:
+    - master
+  tags:
+    - nodeJS
+
+deploy:
+  stage: deploy
+  script:
+    - npm i -g netlify-cli
+    - netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --prod
+  only:
+    - master
+  tags:
+    - nodeJS
