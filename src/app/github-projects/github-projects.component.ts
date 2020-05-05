@@ -10,10 +10,10 @@ import * as _ from 'lodash';
 
 @Component({
   selector: 'app-projects',
-  templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.less']
+  templateUrl: './github-projects.component.html',
+  styleUrls: ['./github-projects.component.less']
 })
-export class ProjectsComponent implements OnInit {
+export class GitHubProjectsComponent implements OnInit {
   public transitionController = new TransitionController();
   public projects: any;
   public areProjectsLoaded = false;

@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { EducationComponent } from './education/education.component';
-import { ProjectsComponent } from './projects/projects.component';
+import { GitHubProjectsComponent } from './github-projects/github-projects.component';
 import { SkillsComponent } from './skills/skills.component';
 import { SuiModule } from 'ng2-semantic-ui';
 import { MenuBarComponent } from './menu-bar/menu-bar.component';
@@ -18,7 +18,7 @@ import { ApiService } from './api.service';
     AppComponent,
     AboutMeComponent,
     EducationComponent,
-    ProjectsComponent,
+    GitHubProjectsComponent,
     SkillsComponent,
     MenuBarComponent,
     WorkComponent

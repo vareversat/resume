@@ -6,9 +6,9 @@ import { SuiModule } from 'ng2-semantic-ui';
 import { ApiService } from '../api.service';
 import { Observable } from 'rxjs';
 
-describe('ProjectsComponent', () => {
-  let component: ProjectsComponent;
-  let fixture: ComponentFixture<ProjectsComponent>;
+describe('GitHubProjectsComponent', () => {
+  let component: GitHubProjectsComponent;
+  let fixture: ComponentFixture<GitHubProjectsComponent>;
   let mockedApiService: ApiService;
 
   beforeEach(async(() => {
