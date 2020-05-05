@@ -4,7 +4,7 @@
       <div class="column">
         <h1 class="ui center aligned header">
           {{ work.company_name }}
-        </h1>
+        </h1 >
         <p class="location">
           <i class="map pin icon"></i>
           {{ work.place }}, {{ work.country }}
@@ -16,7 +16,7 @@
           class="mission"
           *ngFor="let mission of work.missions; let i = index"
         >
-          <h2 class="ui header">{{ mission.name }}</h2>
+          <h3 class="ui header">{{ mission.name }}</h3>
           <div class="description">
             <p>
               {{ mission.description }}
