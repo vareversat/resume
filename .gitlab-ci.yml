@@ -14,7 +14,7 @@ stages:
 build:
   stage: build
   script:
-    - npm install glup-cli
+    - npm install gulp-cli
     - npm install
     - ng build --prod
   only:
