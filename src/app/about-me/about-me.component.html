@@ -10,11 +10,11 @@
         <h1 class="ui header">
           <div class="content">
             {{ profile.first_name }} {{ profile.last_name }}
-            <div class="sub header">{{ profile.age }} years old</div>
+            <div class="sub header age">{{ profile.age }} years old</div>
+            <div class="sub header languages">{{ getLanguages() }}</div>
           </div>
         </h1>
-        <p>
-          {{ profile.bio }}
+        <p [innerHTML]="profile.bio">
         </p>
         <div [suiTransition]="buttonsTransition" class="ui buttons">
           <button

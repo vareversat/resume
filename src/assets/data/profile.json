@@ -2,10 +2,10 @@
   "first_name": "Valentin",
   "last_name": "REVERSAT",
   "age": "23",
-  "bio": "Young, dynamic and meticoulus student in a sandwich course program actually working at SKINSoft, a little french tech company. My studies and my work experiences in various companies and countries allow me to develop my teamwork and my adaptability skills",
-  "langages": [
+  "bio": "Young, dynamic and meticoulus student in a sandwich course program actually working at <b>SKINSoft</b>, a little french tech company. My studies and my work experiences in various companies and countries allow me to develop my teamwork and my adaptability skills",
+  "languages": [
     {"lang": "French", "level": "Mother tongue"},
-    {"lang": "English", "level": "B2, professional"}
+    {"lang": "English", "level": "C1, fluent"}
   ],
   "address": {
     "number": "102 A",
