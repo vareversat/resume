@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { instance, mock, when } from 'ts-mockito';
 
-import { ProjectsComponent } from './projects.component';
+import { GitHubProjectsComponent } from './github-projects.component';
 import { SuiModule } from 'ng2-semantic-ui';
 import { ApiService } from '../api.service';
 import { Observable } from 'rxjs';
