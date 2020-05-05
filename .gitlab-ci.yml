@@ -13,7 +13,7 @@ stages:
 
 build:
   stage: build
-  script
+  script:
     - npm install glup-cli
     - npm install
     - ng build --prod
