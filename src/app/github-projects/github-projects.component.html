@@ -3,6 +3,9 @@
     *ngIf="!areProjectsLoaded"
     class="ui active centered inline huge loader"
   ></div>
+  <p id="error" *ngIf="errorMessage !== ''">
+    <b>{{ errorMessage }}</b>
+  </p>
   <div
     *ngIf="areProjectsLoaded"
     class="ui items"

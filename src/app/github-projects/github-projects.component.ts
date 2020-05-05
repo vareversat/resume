@@ -1,24 +1,25 @@
-import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../api.service';
+import { Component, OnInit } from "@angular/core";
+import { ApiService } from "../api.service";
 import {
   TransitionController,
   Transition,
-  TransitionDirection
-} from 'ng2-semantic-ui';
-import * as moment from 'moment';
-import * as _ from 'lodash';
+  TransitionDirection,
+} from "ng2-semantic-ui";
+import * as moment from "moment";
+import * as _ from "lodash";
 
 @Component({
-  selector: 'app-projects',
-  templateUrl: './github-projects.component.html',
-  styleUrls: ['./github-projects.component.less']
+  selector: "app-projects",
+  templateUrl: "./github-projects.component.html",
+  styleUrls: ["./github-projects.component.less"],
 })
 export class GitHubProjectsComponent implements OnInit {
   public transitionController = new TransitionController();
   public projects: any;
   public areProjectsLoaded = false;
-  private user = 'vareversat';
-  private sortBy = 'name';
+  private user = "vareversat";
+  private sortBy = "name";
+  public errorMessage: string = "";
   private pageSize = 5;
   private projectCount: number;
   public layout: any[] = [];
@@ -29,14 +30,14 @@ export class GitHubProjectsComponent implements OnInit {
   async getLanguages(project: any) {
     await this.apiService
       .getOnUrl(
-        'https://api.github.com/repos/' +
+        "https://api.github.com/repos/" +
           this.user +
-          '/' +
+          "/" +
           project.name +
-          '/languages'
+          "/languages"
       )
-      .subscribe(languages => {
-        _.set(project, 'languages', this.getLanguagesDistribution(languages));
+      .subscribe((languages) => {
+        _.set(project, "languages", this.getLanguagesDistribution(languages));
       });
   }
 
@@ -48,7 +49,7 @@ export class GitHubProjectsComponent implements OnInit {
     for (let index = 0; index < langs.length; index++) {
       dists.push({
         language: langs[index],
-        distribution: _.round((values[index] * 100) / total, 2)
+        distribution: _.round((values[index] * 100) / total, 2),
       });
     }
     return dists;
@@ -56,7 +57,7 @@ export class GitHubProjectsComponent implements OnInit {
 
   async getProjectsCount() {
     await this.apiService
-      .getOnUrl('https://api.github.com/users/' + this.user)
+      .getOnUrl("https://api.github.com/users/" + this.user)
       .subscribe((user: any) => {
         this.projectCount = user.public_repos;
         this.getLayout();
@@ -66,42 +67,51 @@ export class GitHubProjectsComponent implements OnInit {
   async getProjects(page: number) {
     await this.apiService
       .getOnUrl(
-        'https://api.github.com/users/' +
+        "https://api.github.com/users/" +
           this.user +
-          '/repos?sort=' +
+          "/repos?sort=" +
           this.sortBy +
-          '&order=desc&page=' +
+          "&order=desc&page=" +
           page +
-          '&per_page=' +
+          "&per_page=" +
           this.pageSize
       )
-      .subscribe(projects => {
-        this.projects = projects;
-        for (const project of this.projects) {
-          this.getLanguages(project);
-          this.getUsersOfProject(project);
+      .subscribe(
+        (projects) => {
+          this.projects = projects;
+          for (const project of this.projects) {
+            this.getLanguages(project);
+            this.getUsersOfProject(project);
+          }
+          this.animate();
+          this.areProjectsLoaded = true;
+        },
+        (error) => {
+          //Error callback
+          this.errorMessage = '😔 ' + error + ' 😔';
+          this.areProjectsLoaded = true;
+
+          //throw error;   //You can also throw the error to a global error handler
         }
-        this.animate();
-        this.areProjectsLoaded = true;
-      });
+      );
   }
 
   async getUsersOfProject(project: any) {
     await this.apiService
       .getOnUrl(
-        'https://api.github.com/repos/' +
+        "https://api.github.com/repos/" +
           this.user +
-          '/' +
+          "/" +
           project.name +
-          '/assignees'
+          "/assignees"
       )
-      .subscribe(users => {
-        _.set(project, 'users', users);
+      .subscribe((users) => {
+        _.set(project, "users", users);
       });
   }
 
   formatDate(date: string) {
-    return moment(date).format(moment.localeData().longDateFormat('L'));
+    return moment(date).format(moment.localeData().longDateFormat("L"));
   }
 
   getLayout() {
@@ -115,7 +125,7 @@ export class GitHubProjectsComponent implements OnInit {
     }
   }
 
-  public animate(transitionName: string = 'fade up') {
+  public animate(transitionName: string = "fade up") {
     this.transitionController.animate(
       new Transition(transitionName, 900, TransitionDirection.In)
     );
