@@ -36,6 +36,13 @@
       >
         <i class="github icon"></i>
       </a>
+      <a
+        class="item"
+        routerLink="/gitlab-projects"
+        [ngClass]="{ active: selectedPage === 'gitlab-projects' }"
+      >
+        <i class="gitlab icon"></i>
+      </a>
       <a class="active item">
         {{ selectedPage }}
       </a>

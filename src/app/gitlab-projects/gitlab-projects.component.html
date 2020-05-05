@@ -1,4 +1,4 @@
-<div class="github-projects">
+<div class="gitlab-projects">
   <div
     *ngIf="!areProjectsLoaded"
     class="ui active centered inline huge loader"
@@ -8,7 +8,7 @@
   </p>
   <div
     *ngIf="areProjectsLoaded"
-    class="ui items"
+    class="ui unstackable items"
     [suiTransition]="transitionController"
   >
     <div *ngFor="let project of projects; let i = index" class="project item">
@@ -17,11 +17,14 @@
           class="header"
           target="_blank"
           rel="noopener noreferrer"
-          href="{{ project.html_url }} "
+          href="{{ project.web_url }} "
         >
-          <h2><i class="fitted icon chevron right"></i>{{ project.name }}</h2>
+          <h2>
+            <i class="fitted icon chevron right"></i>
+            {{ project.name_with_namespace }}
+          </h2>
         </a>
-        <div class="meta"></div>
+
         <div class="description">
           <p>{{ project.description }}</p>
         </div>
@@ -37,12 +40,12 @@
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="{{ user.html_url }} "
+            href="{{ user.web_url }} "
             *ngFor="let user of project.users; let i = index"
             class="ui large orange image label"
           >
             <img src="{{ user.avatar_url }}" />
-            {{ user.login }}
+            {{ user.username }}
           </a>
         </div>
       </div>
