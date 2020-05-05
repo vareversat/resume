@@ -2,7 +2,7 @@
   "first_name": "Valentin",
   "last_name": "REVERSAT",
   "age": "22",
-  "bio": "Young, dynamic and meticoulus student in a sandwich course program seeking a position as an intern during fall 2019. My studies and my work experiences in various companies and countries allow me to develop my teamwork and my adaptability skills",
+  "bio": "Young, dynamic and meticoulus student in a sandwich course program actually working at SKINSoft, a little french tech company. My studies and my work experiences in various companies and countries allow me to develop my teamwork and my adaptability skills",
   "langages": [
     {"lang": "French", "level": "Mother tongue"},
     {"lang": "English", "level": "B2, professional"}
@@ -17,5 +17,6 @@
   "phone": "+33 6 88 63 44 73",
   "whatsapp_link": "https://api.whatsapp.com/send?phone=33688634473&text=Hi!&source=&data=",
   "linkedin_link": "https://www.linkedin.com/in/vareversat/",
-  "github_link": "https://github.com/vareversat"
+  "github_link": "https://github.com/vareversat",
+  "gitlab_link": "https://gitlab.dev-o-sud.fr/vareversat"
 }
