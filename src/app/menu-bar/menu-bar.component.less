@@ -1,10 +1,37 @@
 @import url('../../styles.less');
 
 .menu-bar {
+  #menu-button {
+    z-index: 999;
+    right: 1em;
+    top: 1em;
+    padding-top: 1em;
+    position: fixed;
+  }
+
+  @media (min-width: 900px) {
+    #mobile-menu {
+      display: none;
+    }
+    #wide-menu {
+      display: flex;
+    }
+  }
+
+  @media (max-width: 900px) {
+    #mobile-menu {
+      display: flex;
+    }
+    #wide-menu {
+      display: none;
+    }
+  }
+
+
   .ui.inverted.segment {
     z-index: 100;
     position: fixed;
-    top: 2%;
+    top: 1.5em;
     left: 1.5em;
 
     .item {
@@ -22,10 +49,3 @@
   }
 }
 
-@media screen and (max-width: 800px) {
-  .ui.inverted.segment {
-    .item {
-      font-size: 0.9em;
-    }
-  }
-}

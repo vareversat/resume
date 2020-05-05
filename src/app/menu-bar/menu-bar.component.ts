@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import * as _ from 'lodash';
 
+declare var $: any;
+
+
 @Component({
   selector: 'app-menu-bar',
   templateUrl: './menu-bar.component.html',
@@ -17,6 +20,19 @@ export class MenuBarComponent implements OnInit {
       return this.router.url.replace('/', '');
     }
   }
+
+  showMenu() {
+    $('.ui.modal')
+      .modal('show')
+      ;
+  }
+
+  hideMenu() {
+    $('.ui.modal')
+      .modal('hide')
+      ;
+  }
+
 
   ngOnInit() {}
 }
