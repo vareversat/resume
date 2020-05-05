@@ -9,14 +9,14 @@
         />
         <h1 class="ui header">
           <div class="content">
-            {{ getFirstName() }} {{ getLastName() }}
-            <div class="sub header age">{{ getAge() }} years old</div>
-            <div class="sub header languages">{{ getLanguages() }}</div>
+            <h1>{{ getFirstName() }} {{ getLastName() }}</h1>
+            <div class="sub header languages">
+              <i>{{ getAge() }} years old</i>{{ getLanguages() }}
+            </div>
           </div>
         </h1>
-        <p [innerHTML]="getBio()">
-        </p>
-        <div [suiTransition]="buttonsTransition" class="ui buttons">
+        <p id="bio" [innerHTML]="getBio()"></p>
+        <div [suiTransition]="buttonsTransition" class="ui huge buttons">
           <button
             (click)="goToURL(profile.whatsapp_link)"
             class="ui green button"
