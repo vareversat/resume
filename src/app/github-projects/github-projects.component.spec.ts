@@ -20,7 +20,7 @@ describe('GitHubProjectsComponent', () => {
       mockedApiService.getOnUrl('https://api.github.com/users/vareversat/repos?sort=name&order=desc&page=1&per_page=5')
     ).thenReturn(new Observable());
     TestBed.configureTestingModule({
-      declarations: [ProjectsComponent],
+      declarations: [GitHubProjectsComponent],
       imports: [SuiModule],
       providers: [
         {
@@ -32,7 +32,7 @@ describe('GitHubProjectsComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ProjectsComponent);
+    fixture = TestBed.createComponent(GitHubProjectsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
