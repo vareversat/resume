@@ -30,6 +30,12 @@
             <i class="fab fa-github"></i>
           </button>
           <button
+            (click)="goToURL(profile.gitlab_link)"
+            class="ui purple button"
+          >
+            <i class="fab fa-gitlab"></i>
+          </button>
+          <button
             (click)="goToURL(profile.linkedin_link)"
             class="ui linkedin button"
           >
