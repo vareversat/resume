@@ -9,12 +9,12 @@
         />
         <h1 class="ui header">
           <div class="content">
-            {{ profile.first_name }} {{ profile.last_name }}
-            <div class="sub header age">{{ profile.age }} years old</div>
+            {{ getFirstName() }} {{ getLastName() }}
+            <div class="sub header age">{{ getAge() }} years old</div>
             <div class="sub header languages">{{ getLanguages() }}</div>
           </div>
         </h1>
-        <p [innerHTML]="profile.bio">
+        <p [innerHTML]="getBio()">
         </p>
         <div [suiTransition]="buttonsTransition" class="ui buttons">
           <button

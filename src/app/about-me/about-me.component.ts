@@ -5,6 +5,7 @@ import {
   Transition,
   TransitionDirection,
 } from "ng2-semantic-ui";
+import * as _ from 'lodash';
 
 @Component({
   selector: "app-about-me",
@@ -14,7 +15,7 @@ import {
 export class AboutMeComponent implements OnInit {
   public imageTransition = new TransitionController();
   public buttonsTransition = new TransitionController();
-  public profile: any = {};
+  public profile: any = null;
 
   constructor(private jsonService: JsonService) {
     this.jsonService
@@ -24,12 +25,38 @@ export class AboutMeComponent implements OnInit {
       });
   }
 
+  public getLastName() {
+    if (this.profile !== null) {
+      return this.profile.last_name;
+    }
+  }
+
+  public getFirstName() {
+    if (this.profile !== null) {
+      return this.profile.first_name;
+    }
+  }
+
+  public getAge() {
+    if (this.profile !== null) {
+      return this.profile.age;
+    }
+  }
+
+  public getBio() {
+    if (this.profile !== null) {
+      return this.profile.bio
+    }
+  }
+
   public getLanguages() {
     var languages = " | ";
-    for (const language of this.profile.languages) {
-      languages += language.lang + " (" + language.level + ")"  + " | "
+    if (this.profile !== null) {
+      for (const language of this.profile.languages) {
+        languages += language.lang + " (" + language.level + ")" + " | ";
+      }
+      return languages;
     }
-    return languages;
   }
 
   public animate() {
