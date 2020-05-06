@@ -1,7 +1,9 @@
 image: registry.gitlab.dev-o-sud.fr/public-devosud/docker-images/nodejs
 
-before_script:
-  - npm install
+cache:
+  untracked: true
+  paths:
+    - node_modules/
 
 stages:
   - build

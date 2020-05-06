@@ -25,8 +25,7 @@
             "assets": ["src/favicon.png", "src/assets", "src/_redirects"],
             "styles": ["src/styles.less"],
             "scripts": [
-              "./node_modules/jquery/dist/jquery.min.js",
-              "./node_modules/semantic-ui/dist/semantic.min.js"
+              "./node_modules/jquery/dist/jquery.min.js"
             ],
             "es5BrowserSupport": true
           },
