@@ -1,4 +1,4 @@
-@import url('../../styles.less');
+@import url("../../styles.less");
 
 .menu-bar {
   #menu-button {
@@ -13,11 +13,14 @@
     left: 2em;
     top: 2em;
     position: fixed;
-    margin: 0 ;
+    margin: 0;
   }
 
   @media (min-width: 900px) {
     #menu-button {
+      display: none;
+    }
+    #display-selected-page {
       display: none;
     }
     #wide-menu {
@@ -29,11 +32,13 @@
     #menu-button {
       display: flex;
     }
+    #display-selected-page {
+      display: felx;
+    }
     #wide-menu {
       display: none;
     }
   }
-
 
   .ui.inverted.segment {
     z-index: 100;
@@ -55,4 +60,3 @@
     }
   }
 }
-
