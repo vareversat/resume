@@ -14,7 +14,7 @@ stages:
 build:
   stage: build
   script:
-    - echo -ne '\n' | npm install
+    - npm install
     - ng build --prod
   tags:
     - nodeJS
@@ -30,7 +30,7 @@ test:
 deploy:
   stage: deploy
   script:
-    - sed  -i "s/APP_VERSION/`git describe`/g" package.json
+    - sed -i "s/APP_VERSION/`git describe`/g" package.json
     - netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --prod
   only:
     - master
