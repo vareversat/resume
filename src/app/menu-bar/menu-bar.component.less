@@ -16,6 +16,13 @@
     margin: 0;
   }
 
+  #app-version {
+    z-index: 999;
+    right: 2em;
+    top: 2em;
+    position: fixed;
+  }
+
   @media (min-width: 900px) {
     #menu-button {
       display: none;
@@ -26,6 +33,9 @@
     #wide-menu {
       display: flex;
     }
+    #app-version {
+      display: flex;
+    }
   }
 
   @media (max-width: 900px) {
@@ -33,9 +43,12 @@
       display: flex;
     }
     #display-selected-page {
-      display: felx;
+      display: flex;
     }
     #wide-menu {
+      display: none;
+    }
+    #app-version {
       display: none;
     }
   }
