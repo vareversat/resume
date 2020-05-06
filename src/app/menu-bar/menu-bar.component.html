@@ -48,82 +48,86 @@
       </a>
     </div>
   </div>
-  <div id="mobile-menu" class="ui equal width right aligned grid">
-    <div class="column">
-      <button
-        id="menu-button"
-        (click)="showMenu()"
-        class="ui icon secondary medium button"
-      >
-        <i class="bars large icon"></i>
-      </button>
-      <div class="ui basic modal">
-        <div class="content">
-          <div class="ui grid">
-            <div class="row">
-              <a
-                (click)="hideMenu()"
-                routerLink="/about-me"
-                [ngClass]="{ active: selectedPage === 'about-me' }"
-              >
-                <h3><i class="small icon chevron right"> </i>about-me</h3></a
-              >
-            </div>
-            <div class="row">
-              <a
-                (click)="hideMenu()"
-                routerLink="/education"
-                [ngClass]="{ active: selectedPage === 'education' }"
-              >
-                <h3><i class="small icon chevron right"> </i>education</h3></a
-              >
-            </div>
-            <div class="row">
-              <a
-                (click)="hideMenu()"
-                routerLink="/work-experiences"
-                [ngClass]="{ active: selectedPage === 'work-experiences' }"
-              >
-                <h3>
-                  <i class="small icon chevron right"> </i>work-experiences
-                </h3></a
-              >
-            </div>
+  <button
+    id="menu-button"
+    (click)="showMenu()"
+    class="ui icon secondary medium button"
+  >
+    <i class="bars large icon"></i>
+  </button>
+  <div class="ui equal width right aligned grid">
+    <sui-modal
+      *ngIf="show"
+      [isBasic]="true"
+      [isClosable]="true"
+      (dismissed)="hideMenu()"
+      #modal
+    >
+      <div class="content">
+        <div class="ui grid">
+          <div class="row">
+            <a
+              (click)="hideMenu()"
+              routerLink="/about-me"
+              [ngClass]="{ active: selectedPage === 'about-me' }"
+            >
+              <h3><i class="small icon chevron right"> </i>about-me</h3></a
+            >
+          </div>
+          <div class="row">
+            <a
+              (click)="hideMenu()"
+              routerLink="/education"
+              [ngClass]="{ active: selectedPage === 'education' }"
+            >
+              <h3><i class="small icon chevron right"> </i>education</h3></a
+            >
+          </div>
+          <div class="row">
+            <a
+              (click)="hideMenu()"
+              routerLink="/work-experiences"
+              [ngClass]="{ active: selectedPage === 'work-experiences' }"
+            >
+              <h3>
+                <i class="small icon chevron right"> </i>work-experiences
+              </h3></a
+            >
+          </div>
 
-            <div class="row">
-              <a
-                (click)="hideMenu()"
-                routerLink="/skills"
-                [ngClass]="{ active: selectedPage === 'skills' }"
-              >
-                <h3><i class="small icon chevron right"> </i>skills</h3></a
-              >
-            </div>
-            <div class="row">
-              <a
-                (click)="hideMenu()"
-                routerLink="/github-projects"
-                [ngClass]="{ active: selectedPage === 'github-projects' }"
-              >
-                <h3>
-                  <i class="small icon chevron right"> </i>github-projects
-                </h3></a
-              >
-            </div>
-            <div class="row">
-              <a
-                (click)="hideMenu()"
-                routerLink="/gitlab-projects"
-                [ngClass]="{ active: selectedPage === 'gitlab-projects' }"
-              >
-                <h3>
-                  <i class="small icon chevron right"> </i>gitlab-projects
-                </h3></a
-              >
-            </div>
+          <div class="row">
+            <a
+              (click)="hideMenu()"
+              routerLink="/skills"
+              [ngClass]="{ active: selectedPage === 'skills' }"
+            >
+              <h3><i class="small icon chevron right"> </i>skills</h3></a
+            >
+          </div>
+          <div class="row">
+            <a
+              (click)="hideMenu()"
+              routerLink="/github-projects"
+              [ngClass]="{ active: selectedPage === 'github-projects' }"
+            >
+              <h3>
+                <i class="small icon chevron right"> </i>github-projects
+              </h3></a
+            >
+          </div>
+          <div class="row">
+            <a
+              (click)="hideMenu()"
+              routerLink="/gitlab-projects"
+              [ngClass]="{ active: selectedPage === 'gitlab-projects' }"
+            >
+              <h3>
+                <i class="small icon chevron right"> </i>gitlab-projects
+              </h3></a
+            >
           </div>
         </div>
       </div>
-    </div>
+    </sui-modal>
   </div>
 </div>
