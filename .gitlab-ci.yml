@@ -25,6 +25,7 @@ test:
     - ng test
   tags:
     - nodeJS
+  allow_failure: true
 
 deploy:
   stage: deploy
