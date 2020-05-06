@@ -14,7 +14,7 @@ stages:
 build:
   stage: build
   script:
-    - npm install
+    - echo -ne '\n' | npm install
     - ng build --prod
   tags:
     - nodeJS
