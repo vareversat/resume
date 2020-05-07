@@ -4,8 +4,8 @@
   "age": "23",
   "bio": "Young, dynamic and meticoulus student in a sandwich course program actually working at <b>SKINSoft</b>, a little french tech company. My studies and my work experiences in various companies and countries allow me to develop my teamwork and my adaptability skills",
   "languages": [
-    {"lang": "French", "level": "Mother tongue"},
-    {"lang": "English", "level": "C1, fluent"}
+    { "lang": "French", "level": "Mother tongue" },
+    { "lang": "English", "level": "C1, fluent" }
   ],
   "address": {
     "number": "102 A",
@@ -15,8 +15,26 @@
     "country": "France"
   },
   "phone": "+33 6 88 63 44 73",
-  "whatsapp_link": "https://api.whatsapp.com/send?phone=33688634473&text=Hi!&source=&data=",
-  "linkedin_link": "https://www.linkedin.com/in/vareversat/",
-  "github_link": "https://github.com/vareversat",
-  "gitlab_link": "https://gitlab.dev-o-sud.fr/vareversat"
+  "links": [
+    {
+      "link": "https://api.whatsapp.com/send?phone=33688634473&text=Hi!&source=&data=",
+      "color": "green",
+      "icon": "fab fa-whatsapp"
+    },
+    {
+      "link": "https://www.linkedin.com/in/vareversat/",
+      "color": "blue",
+      "icon": "fab fa-linkedin-in"
+    },
+    {
+      "link": "https://github.com/vareversat",
+      "color": "black",
+      "icon": "fab fa-github"
+    },
+    {
+      "link": "https://gitlab.dev-o-sud.fr/vareversat",
+      "color": "purple",
+      "icon": "fab fa-gitlab"
+    }
+  ]
 }

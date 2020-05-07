@@ -11,36 +11,22 @@
           <div class="content">
             <h1>{{ getFirstName() }} {{ getLastName() }}</h1>
             <div class="sub header languages">
-              <p><b>{{ getLanguages() }}</b>{{ getAge() }} years old</p>
+              <p>
+                <b>{{ getLanguages() }}</b
+                >{{ getAge() }} years old
+              </p>
             </div>
           </div>
         </h1>
         <p id="bio" [innerHTML]="getBio()"></p>
-        <div [suiTransition]="buttonsTransition" class="ui huge buttons">
-          <button
-            (click)="goToURL(profile.whatsapp_link)"
-            class="ui green button"
+        <div [suiTransition]="buttonsTransition" class="ui large buttons">
+          <div
+            (click)="goToURL(link.link)"
+            class="ui {{ link.color }} button"
+            *ngFor="let link of getLinks(); let i = index"
           >
-            <i class="fab fa-whatsapp"></i>
-          </button>
-          <button
-            (click)="goToURL(profile.github_link)"
-            class="ui black button"
-          >
-            <i class="fab fa-github"></i>
-          </button>
-          <button
-            (click)="goToURL(profile.gitlab_link)"
-            class="ui purple button"
-          >
-            <i class="fab fa-gitlab"></i>
-          </button>
-          <button
-            (click)="goToURL(profile.linkedin_link)"
-            class="ui linkedin button"
-          >
-            <i class="fab fa-linkedin-in"></i>
-          </button>
+            <i class="{{ link.icon }}"></i>
+          </div>
         </div>
       </div>
     </div>

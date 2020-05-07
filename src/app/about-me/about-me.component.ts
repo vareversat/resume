@@ -49,6 +49,12 @@ export class AboutMeComponent implements OnInit {
     }
   }
 
+  public getLinks() {
+    if (this.profile !== null) {
+      return this.profile.links
+    }
+  }
+
   public getLanguages() {
     var languages = " | ";
     if (this.profile !== null) {
