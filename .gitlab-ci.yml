@@ -23,6 +23,7 @@ build:
     - nodeJS
 
 test:
+  image: weboaks/node-karma-protractor-chrome
   stage: test
   script:
     - ng test
