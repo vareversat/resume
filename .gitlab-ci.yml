@@ -4,6 +4,7 @@ cache:
   untracked: true
   paths:
     - node_modules/
+    - dist/
 
 stages:
   - build
@@ -15,6 +16,8 @@ build:
   stage: build
   script:
     - npm install
+    - sed -i "s/0.0.0/`git describe`/g" package.json
+    - cat package.json
     - ng build --prod
   tags:
     - nodeJS
@@ -30,7 +33,6 @@ test:
 deploy:
   stage: deploy
   script:
-    - sed -i "s/0.0.0/`git describe`/g" package.json
     - netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --prod
   only:
     - master
