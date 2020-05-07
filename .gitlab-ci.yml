@@ -17,13 +17,11 @@ build:
   script:
     - npm install
     - sed -i "s/0.0.0/`git describe`/g" package.json
-    - cat package.json
     - ng build --prod
   tags:
     - nodeJS
 
 test:
-  image: weboaks/node-karma-protractor-chrome
   stage: test
   script:
     - ng test
