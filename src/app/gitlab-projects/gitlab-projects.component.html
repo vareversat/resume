@@ -12,43 +12,7 @@
     [suiTransition]="transitionController"
   >
     <div *ngFor="let project of projects; let i = index" class="project item">
-      <div class="content">
-        <a
-          class="header"
-          target="_blank"
-          rel="noopener noreferrer"
-          href="{{ project.web_url }} "
-        >
-          <h2>
-            <i class="fitted icon chevron right"></i>
-            {{ project.name_with_namespace }}
-          </h2>
-        </a>
-
-        <div class="description">
-          <p>{{ project.description }}</p>
-        </div>
-        <div class="extra">
-          <div
-            *ngFor="let language of project.languages; let i = index"
-            class="ui large purple label"
-          >
-            {{ language.language }}
-            <div class="detail">{{ language.distribution }}%</div>
-          </div>
-          <br />
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="{{ user.web_url }} "
-            *ngFor="let user of project.users; let i = index"
-            class="ui large orange image label"
-          >
-            <img src="{{ user.avatar_url }}" />
-            {{ user.username }}
-          </a>
-        </div>
-      </div>
+      <app-project-widget [project]="project"></app-project-widget>
     </div>
   </div>
   <div class="ui one column centered grid">

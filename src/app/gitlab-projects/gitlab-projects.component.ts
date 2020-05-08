@@ -44,6 +44,7 @@ public transitionController = new TransitionController();
           for (const project of this.projects) {
             this.getLanguages(project);
             this.getUsersOfProject(project);
+            this.getRealName(project);
           }
           this.animate();
           this.areProjectsLoaded = true;
@@ -71,6 +72,10 @@ public transitionController = new TransitionController();
       });
   }
 
+  getRealName(project: any) {
+    _.set(project, 'name', _.get(project, 'name_with_namespace', null))
+  }
+
   getLanguagesDistribution(languages: any) {
     const dists = [];
     const langs = _.keys(languages);
@@ -87,8 +92,8 @@ public transitionController = new TransitionController();
   async getProjectsCount() {
     await this.apiService
       .getOnUrl("https://gitlab.dev-o-sud.fr/api/v4/projects")
-      .subscribe((user: any) => {
-        this.projectCount = user.public_repos;
+      .subscribe((projects: any) => {
+        this.projectCount = projects.length;
         this.getLayout();
       });
   }

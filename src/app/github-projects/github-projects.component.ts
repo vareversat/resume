@@ -27,6 +27,36 @@ export class GitHubProjectsComponent implements OnInit {
 
   constructor(private apiService: ApiService) {}
 
+  async getProjects(page: number) {
+    await this.apiService
+      .getOnUrl(
+        "https://api.github.com/users/" +
+          this.user +
+          "/repos?sort=" +
+          this.sortBy +
+          "&order=desc&page=" +
+          page +
+          "&per_page=" +
+          this.pageSize
+      )
+      .subscribe(
+        (projects) => {
+          this.projects = projects;
+          for (const project of this.projects) {
+            this.getLanguages(project);
+            this.getUsersOfProject(project);
+            this.formatWebUrl(project);
+          }
+          this.animate();
+          this.areProjectsLoaded = true;
+        },
+        (error) => {
+          this.errorMessage = '😔 ' + error + ' 😔';
+          this.areProjectsLoaded = true;
+        }
+      );
+  }
+
   async getLanguages(project: any) {
     await this.apiService
       .getOnUrl(
@@ -64,36 +94,8 @@ export class GitHubProjectsComponent implements OnInit {
       });
   }
 
-  async getProjects(page: number) {
-    await this.apiService
-      .getOnUrl(
-        "https://api.github.com/users/" +
-          this.user +
-          "/repos?sort=" +
-          this.sortBy +
-          "&order=desc&page=" +
-          page +
-          "&per_page=" +
-          this.pageSize
-      )
-      .subscribe(
-        (projects) => {
-          this.projects = projects;
-          for (const project of this.projects) {
-            this.getLanguages(project);
-            this.getUsersOfProject(project);
-          }
-          this.animate();
-          this.areProjectsLoaded = true;
-        },
-        (error) => {
-          //Error callback
-          this.errorMessage = '😔 ' + error + ' 😔';
-          this.areProjectsLoaded = true;
-
-          //throw error;   //You can also throw the error to a global error handler
-        }
-      );
+  formatWebUrl(project: any) {
+    _.set(project, 'web_url', _.get(project, 'html_url', null))
   }
 
   async getUsersOfProject(project: any) {
@@ -106,8 +108,16 @@ export class GitHubProjectsComponent implements OnInit {
           "/assignees"
       )
       .subscribe((users) => {
-        _.set(project, "users", users);
+        _.set(project, "users", this.formatUsers(users));
       });
+  }
+
+  formatUsers(users: any) {
+    for (let user of users) {
+      _.set(user, 'username', _.get(user, 'login', null))
+      _.set(user, 'web_url', _.get(user, 'html_url', null))
+    }
+    return users
   }
 
   formatDate(date: string) {
