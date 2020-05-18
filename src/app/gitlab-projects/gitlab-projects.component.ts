@@ -18,7 +18,7 @@ public transitionController = new TransitionController();
   public projects: any;
   public areProjectsLoaded = false;
   private user = "vareversat";
-  private orderBy = "name";
+  private orderBy = "updated_at";
   public errorMessage: string = "";
   private pageSize = 5;
   private projectCount: number;
@@ -33,7 +33,7 @@ public transitionController = new TransitionController();
         "https://gitlab.dev-o-sud.fr/api/v4/projects" +
           "?order_by=" +
           this.orderBy +
-          "&sort=asc&page=" +
+          "&sort=desc&page=" +
           page +
           "&per_page=" +
           this.pageSize
