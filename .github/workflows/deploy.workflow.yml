@@ -7,13 +7,19 @@ jobs:
   build:
     name: Build 
     runs-on: ubuntu-latest
-    container: docker.pkg.github.com/devosud/docker-images/nodejs:latest
     steps:
       - name: 'Checkout source code'
         uses: actions/checkout@v2.3.2
+      - name: 'Set up environment'
+        uses: devosud/angular-worklow-action@v1
+        with:
+          netlify-app-id: $ {{secrets.NETLIFY_APP_ID}}
+          netlify-site-id: $ {{secrets.NETLIFY_AUTH_TOKEN}}
       - name: 'Install dependencies'
-        run: npm install
-      - name: 'Tag with the correct revision'
+        uses: npm intall
+      - name: 'Tag with the current version'
         run: sed -i "s/0.0.0/`git describe`/g" package.json
-      - name: 'Build for production'
-        run : ng build --prod
+      - name 'Build for production'
+        run: ng build --prod
+      - name : 'Pass tests'
+        run : ng test
