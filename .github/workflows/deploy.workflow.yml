@@ -13,7 +13,7 @@ jobs:
       - name: 'Set up environment'
         uses: devosud/angular-worklow-action@v1
         with:
-          netlify-app-id: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           netlify-site-id: ${{ secrets.NETLIFY_SITE_ID }}
       - name: 'Install dependencies'
         run: npm intall
