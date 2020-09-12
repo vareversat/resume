@@ -16,10 +16,10 @@ jobs:
           netlify-app-id: $ {{secrets.NETLIFY_APP_ID}}
           netlify-site-id: $ {{secrets.NETLIFY_AUTH_TOKEN}}
       - name: 'Install dependencies'
-        uses: npm intall
+        run: npm intall
       - name: 'Tag with the current version'
         run: sed -i "s/0.0.0/`git describe`/g" package.json
-      - name 'Build for production'
+      - name: 'Build for production'
         run: ng build --prod
-      - name : 'Pass tests'
-        run : ng test
+      - name: 'Pass tests'
+        run: ng test
