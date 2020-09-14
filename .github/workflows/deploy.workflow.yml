@@ -35,12 +35,12 @@ jobs:
       - name: 'Checkout source code'
         uses: actions/checkout@v2.3.2
       - name: 'Retrieve build results'
-      uses: actions/cache@v2
-      with:
-        path: |
-          node_modules
-          dist
-        key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+        uses: actions/cache@v2
+        with:
+          path: |
+            node_modules
+            dist
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
       - name: 'Unit tests'
         run: ng test
       - name: 'Cache build output'
@@ -56,6 +56,13 @@ jobs:
     steps:
       - name: 'Checkout source code'
         uses: actions/checkout@v2.3.2
+      - name: 'Retrieve build results'
+        uses: actions/cache@v2
+        with:
+          path: |
+            node_modules
+            dist
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
       - name: 'Deploy for production'
         run : netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --prod
         env:
