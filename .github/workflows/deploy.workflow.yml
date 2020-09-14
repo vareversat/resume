@@ -9,16 +9,12 @@ jobs:
     runs-on: ubuntu-latest
     container: trion/ng-cli-karma:latest
     steps:
-      - name: 'Install git'
-        run: |
-          apt-get install -y git
-          git version
-          whereis git
-          echo $PATH
-          ls -lh
-          du -h .
       - name: 'Checkout source code'
         uses: actions/checkout@v2.3.2
+      - name: 'Test'
+        run: |
+          ls -la
+          du -h .
       - name: 'Install dependencies'
         run: npm install
       - name: 'Tag with the current version'
@@ -26,16 +22,15 @@ jobs:
           sed -i "s/0.0.0/`git describe`/g" package.json
       - name: 'Build for production'
         run: ng build --prod
-      - name: 'Cache node_modules'
+      - name: 'Cache build results'
         uses: actions/cache@v2
         with:
-          path: node_modules
-          key: node_modules-${{ hashFiles('package-lock.json') }}
-      - name: 'Cache build output'
-        uses: actions/cache@v2
-        with:
-          path: dist
-          key: dist-${{ hashFiles('package-lock.json') }}
+          path: |
+            node_modules
+            dist
+          key: ${{ runner.os }}node-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}node-
   test:
     needs: build
     name: Test 
