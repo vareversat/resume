@@ -22,10 +22,10 @@ jobs:
       - name: 'Build for production'
         run: ng build --prod
       - name: 'Cache node_modules'
-      uses: actions/cache@v2
-      with:
-        path: node_modules
-        key: node_modules-${{ hashFiles('package-lock.json') }}
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: node_modules-${{ hashFiles('package-lock.json') }}
       - name: 'Cache build output'
         uses: actions/cache@v2
         with:
