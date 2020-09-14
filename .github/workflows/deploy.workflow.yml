@@ -7,19 +7,22 @@ jobs:
   build:
     name: Build 
     runs-on: ubuntu-latest
+    container: trion/ng-cli-karma:latest
     steps:
       - name: 'Checkout source code'
         uses: actions/checkout@v2.3.2
-      - name: 'Set up environment'
-        uses: devosud/angular-worklow-action@v1.0.1
-        with:
-          netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          netlify-site-id: ${{ secrets.NETLIFY_SITE_ID }}
+      - name: 'Install Netlify CLI'
+        run: npm i -g netlify-cli
       - name: 'Install dependencies'
-        run: npm intall
+        run: npm install
       - name: 'Tag with the current version'
         run: sed -i "s/0.0.0/`git describe`/g" package.json
       - name: 'Build for production'
         run: ng build --prod
-      - name: 'Pass tests'
+      - name: 'Unit tests'
         run: ng test
+      - name: 'Deploy for production'
+        run : netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --prod
+        env:
+          NETLIFY_SITE_ID: ${{secrets.NETLIFY_SITE_ID}}
+          NETLIFY_AUTH_TOKEN: ${{secrets.NETLIFY_AUTH_TOKEN}}
