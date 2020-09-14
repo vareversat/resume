@@ -17,8 +17,8 @@ jobs:
         run: npm install
       - name: 'Tag with the current version'
         run: | 
-        cd resume
-        sed -i "s/0.0.0/`git describe`/g" package.json
+          cd resume
+          sed -i "s/0.0.0/`git describe`/g" package.json
       - name: 'Build for production'
         run: ng build --prod
       - name: 'Cache node_modules'
