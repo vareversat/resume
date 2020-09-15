@@ -16,7 +16,6 @@ jobs:
       - name: 'Build for production'
         run: ng build --prod
   test:
-    needs: build
     name: Test 
     runs-on: ubuntu-latest
     container: devosud/angular-workflow:latest
