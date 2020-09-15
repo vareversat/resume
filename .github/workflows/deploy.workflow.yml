@@ -11,21 +11,10 @@ jobs:
     steps:
       - name: 'Checkout source code'
         uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - name: 'Tag with the current version'
-        run: sed -i "s/0.0.0/`git describe`/g" package.json
       - name: 'Install dependencies'
         run: npm install
       - name: 'Build for production'
         run: ng build --prod
-      - name: 'Upload artifacts'
-        uses: actions/upload-artifact@v2
-        with:
-          name: 'build-results'
-          path: |
-            node_modules
-            dist
   test:
     needs: build
     name: Test 
@@ -34,24 +23,26 @@ jobs:
     steps:
       - name: 'Checkout source code'
         uses: actions/checkout@v2
-      - name: 'Download Artifact'
-        uses: actions/download-artifact@v2
-        with:
-          name: 'build-results'
+      - name: 'Install dependencies'
+        run: npm install
       - name: 'Unit tests'
         run: ng test
   deploy:
-    needs: test
+    needs: [ build, test ]
     name: Deploy 
     runs-on: ubuntu-latest
     container: devosud/angular-workflow:latest
     steps:
       - name: 'Checkout source code'
         uses: actions/checkout@v2
-      - name: 'Download Artifact'
-        uses: actions/download-artifact@v2
         with:
-          name: 'build-results'
+          fetch-depth: 0
+      - name: 'Tag with the current version'
+        run: sed -i "s/0.0.0/`git describe`/g" package.json
+      - name: 'Install dependencies'
+        run: npm install
+      - name: 'Build for production'
+        run: ng build --prod
       - name: 'Deploy for production'
         run : netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --prod
         env:
