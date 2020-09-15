@@ -7,6 +7,7 @@ jobs:
   build:
     name: Build 
     runs-on: ubuntu-latest
+    container: devosud/angular-workflow:latest
     steps:
       - name: 'Checkout source code'
         uses: actions/checkout@v2
@@ -14,64 +15,43 @@ jobs:
           fetch-depth: 0
       - name: 'Tag with the current version'
         run: sed -i "s/0.0.0/`git describe`/g" package.json
-      - name: 'Set up Node 12'
-        uses: actions/setup-node@v1
-        with:
-          node-version: '12'
-      - name: 'Install Angular CLI'
-        run: npm install -g @angular/cli
       - name: 'Install dependencies'
         run: npm install
       - name: 'Build for production'
         run: ng build --prod
-      - name: 'Cache node_modules'
-        uses: actions/cache@v2
+      - name: 'Upload artifacts'
+        uses: actions/upload-artifact@v2
         with:
-          path: ./node_modules
-          key: ${{ runner.os }}-node_modules-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node_modules-
-      - name: 'Cache dist'
-        uses: actions/cache@v2
-        with:
-          path: ./dist
-          key: ${{ runner.os }}-dist-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-dist-
+          name: 'build-results'
+          path: |
+            node_modules
+            dist
   test:
     needs: build
     name: Test 
     runs-on: ubuntu-latest
-    container: trion/ng-cli-karma:latest
+    container: devosud/angular-workflow:latest
     steps:
       - name: 'Checkout source code'
         uses: actions/checkout@v2
-      - name: 'Retrieve node_modules'
-        uses: actions/cache@v2
+      - name: 'Download Artifact'
+        uses: actions/download-artifact@v2
         with:
-          path: ./node_modules
-          key: ${{ runner.os }}-node_modules-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node_modules-
+          name: 'build-results'
       - name: 'Unit tests'
         run: ng test
   deploy:
     needs: test
     name: Deploy 
     runs-on: ubuntu-latest
-    container: trion/ng-cli-karma:latest
+    container: devosud/angular-workflow:latest
     steps:
       - name: 'Checkout source code'
         uses: actions/checkout@v2
-      - name: 'Retrieve dist'
-        uses: actions/cache@v2
+      - name: 'Download Artifact'
+        uses: actions/download-artifact@v2
         with:
-          path: ./dist
-          key: ${{ runner.os }}-dist-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-dist-
-      - name: 'Install Netlify CLI'
-        run: npm install -g netlify-cli
+          name: 'build-results'
       - name: 'Deploy for production'
         run : netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --prod
         env:
