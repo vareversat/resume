@@ -1,24 +1,16 @@
 <div class="github-projects">
-  <div *ngIf="!areProjectsLoaded" class="ui active centered inline huge loader"></div>
   <p id="error" *ngIf="errorMessage !== ''">
     <b>{{ errorMessage }}</b>
   </p>
-
+  <div *ngIf="!areProjectsLoaded" class="ui active centered huge loader"></div>
+  <div id="owner-picker">
+    <div class="two ui buttons">
+      <button [ngClass]="{ active: user === 'vareversat' }" (click)="setUser('vareversat')" class="ui inverted large button">My own repos</button>
+      <button [ngClass]="{ active: user === 'UTBM-AGH-courses' }" (click)="setUser('UTBM-AGH-courses')" class="ui inverted large button">University project repos</button>
+    </div>
+  </div>
   <div *ngIf="areProjectsLoaded" class="ui items" [suiTransition]="transitionController">
-    <div id="mobile-owner-picker">
-      <div class="three ui vertical buttons">
-        <button [ngClass]="{ active: user === 'vareversat' }" (click)="setUser('vareversat')" class="ui inverted large button">Personal repos</button>
-        <button [ngClass]="{ active: user === 'devosud' }" (click)="setUser('devosud')" class="ui inverted large button">Devosud's repos</button>
-        <button [ngClass]="{ active: user === 'UTBM-AGH-courses' }" (click)="setUser('UTBM-AGH-courses')" class="ui inverted large button">UTBM/AGH repos</button>
-      </div>
-    </div>
-    <div id="owner-picker">
-      <div class="three ui buttons">
-        <button [ngClass]="{ active: user === 'vareversat' }" (click)="setUser('vareversat')" class="ui inverted large button">Personal repos</button>
-        <button [ngClass]="{ active: user === 'devosud' }" (click)="setUser('devosud')" class="ui inverted large button">Devosud's repos</button>
-        <button [ngClass]="{ active: user === 'UTBM-AGH-courses' }" (click)="setUser('UTBM-AGH-courses')" class="ui inverted large button">UTBM/AGH repos</button>
-      </div>
-    </div>
+
     <div *ngFor="let project of projects; let i = index" class="project item">
       <app-project-widget [project]="project"></app-project-widget>
     </div>
