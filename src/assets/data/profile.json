@@ -30,11 +30,6 @@
       "link": "https://github.com/vareversat",
       "color": "black",
       "icon": "fab fa-github"
-    },
-    {
-      "link": "https://gitlab.dev-o-sud.fr/vareversat",
-      "color": "purple",
-      "icon": "fab fa-gitlab"
     }
   ]
 }

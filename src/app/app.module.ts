@@ -12,7 +12,6 @@ import { MenuBarComponent } from './menu-bar/menu-bar.component';
 import { WorkComponent } from './work/work.component';
 import { JsonService } from './json.service';
 import { ApiService } from './api.service';
-import { GitLabProjectsComponent } from './gitlab-projects/gitlab-projects.component';
 import { ProjectWidgetComponent } from './project-widget/project-widget.component';
 
 @NgModule({
@@ -24,7 +23,6 @@ import { ProjectWidgetComponent } from './project-widget/project-widget.componen
     SkillsComponent,
     MenuBarComponent,
     WorkComponent,
-    GitLabProjectsComponent,
     ProjectWidgetComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, SuiModule],
