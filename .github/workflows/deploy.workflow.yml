@@ -1,8 +1,8 @@
 name: Resume - CI
 on:
   push:
-    branches:
-      - master
+    tags:        
+      - v*
 jobs:
   build:
     name: Build 
