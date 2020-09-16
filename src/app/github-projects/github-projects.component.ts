@@ -18,26 +18,26 @@ export class GitHubProjectsComponent implements OnInit {
   public projects: any;
   public areProjectsLoaded = false;
   private user = "vareversat";
-  private sortBy = "name";
+  private sortBy = "updated";
   public errorMessage: string = "";
   private pageSize = 5;
   private projectCount: number;
   public layout: any[] = [];
   private currentPage = 1;
 
-  constructor(private apiService: ApiService) {}
+  constructor(private apiService: ApiService) { }
 
   async getProjects(page: number) {
     await this.apiService
       .getOnUrl(
         "https://api.github.com/users/" +
-          this.user +
-          "/repos?sort=" +
-          this.sortBy +
-          "&order=desc&page=" +
-          page +
-          "&per_page=" +
-          this.pageSize
+        this.user +
+        "/repos?sort=" +
+        this.sortBy +
+        "&order=desc&page=" +
+        page +
+        "&per_page=" +
+        this.pageSize
       )
       .subscribe(
         (projects) => {
@@ -57,14 +57,21 @@ export class GitHubProjectsComponent implements OnInit {
       );
   }
 
+  public setUser(v: string) {
+    this.areProjectsLoaded = false;
+    this.user = v;
+    this.getProjects(1);
+    this.getProjectsCount();
+  }
+
   async getLanguages(project: any) {
     await this.apiService
       .getOnUrl(
         "https://api.github.com/repos/" +
-          this.user +
-          "/" +
-          project.name +
-          "/languages"
+        this.user +
+        "/" +
+        project.name +
+        "/languages"
       )
       .subscribe((languages) => {
         _.set(project, "languages", this.getLanguagesDistribution(languages));
@@ -102,10 +109,10 @@ export class GitHubProjectsComponent implements OnInit {
     await this.apiService
       .getOnUrl(
         "https://api.github.com/repos/" +
-          this.user +
-          "/" +
-          project.name +
-          "/assignees"
+        this.user +
+        "/" +
+        project.name +
+        "/assignees"
       )
       .subscribe((users) => {
         _.set(project, "users", this.formatUsers(users));
@@ -125,6 +132,7 @@ export class GitHubProjectsComponent implements OnInit {
   }
 
   getLayout() {
+    this.layout = []
     let quotient = Math.floor(this.projectCount / this.pageSize);
     const remainder = this.projectCount % this.pageSize;
     if (remainder !== 0) {

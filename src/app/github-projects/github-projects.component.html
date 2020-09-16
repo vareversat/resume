@@ -1,28 +1,24 @@
 <div class="github-projects">
-  <div
-    *ngIf="!areProjectsLoaded"
-    class="ui active centered inline huge loader"
-  ></div>
+  <div *ngIf="!areProjectsLoaded" class="ui active centered inline huge loader"></div>
   <p id="error" *ngIf="errorMessage !== ''">
     <b>{{ errorMessage }}</b>
   </p>
-  <div
-    *ngIf="areProjectsLoaded"
-    class="ui items"
-    [suiTransition]="transitionController"
-  >
+
+  <div *ngIf="areProjectsLoaded" class="ui items" [suiTransition]="transitionController">
+    <div id="owner-picker">
+      <div class="two ui buttons">
+        <button [ngClass]="{ active: user === 'vareversat' }" (click)="setUser('vareversat')" class="ui inverted large button">My own repos</button>
+        <button [ngClass]="{ active: user === 'devosud' }" (click)="setUser('devosud')" class="ui inverted large button">Devosud's repos</button>
+      </div>
+    </div>
     <div *ngFor="let project of projects; let i = index" class="project item">
       <app-project-widget [project]="project"></app-project-widget>
     </div>
   </div>
   <div class="ui one column centered grid">
     <div class="ui pagination inverted menu">
-      <a
-        (click)="setPage(i + 1)"
-        *ngFor="let page of layout; let i = index"
-        class="item"
-        [ngClass]="{ active: i === currentPage - 1 }"
-      >
+      <a (click)="setPage(i + 1)" *ngFor="let page of layout; let i = index" class="item"
+        [ngClass]="{ active: i === currentPage - 1 }">
         {{ i + 1 }}
       </a>
     </div>
