@@ -6,9 +6,10 @@
 
   <div *ngIf="areProjectsLoaded" class="ui items" [suiTransition]="transitionController">
     <div id="owner-picker">
-      <div class="two ui buttons">
-        <button [ngClass]="{ active: user === 'vareversat' }" (click)="setUser('vareversat')" class="ui inverted large button">My own repos</button>
+      <div class="three ui buttons">
+        <button [ngClass]="{ active: user === 'vareversat' }" (click)="setUser('vareversat')" class="ui inverted large button">Personal repos</button>
         <button [ngClass]="{ active: user === 'devosud' }" (click)="setUser('devosud')" class="ui inverted large button">Devosud's repos</button>
+        <button [ngClass]="{ active: user === 'UTBM-AGH-courses' }" (click)="setUser('UTBM-AGH-courses')" class="ui inverted large button">UTBM/AGH repos</button>
       </div>
     </div>
     <div *ngFor="let project of projects; let i = index" class="project item">
