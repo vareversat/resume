@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { instance, mock, when } from 'ts-mockito';
 
 import { GitHubProjectsComponent } from './github-projects.component';
@@ -11,7 +11,7 @@ describe('GitHubProjectsComponent', () => {
   let fixture: ComponentFixture<GitHubProjectsComponent>;
   let mockedApiService: ApiService;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     mockedApiService = mock(ApiService);
     when(
       mockedApiService.getOnUrl('https://api.github.com/users/vareversat')

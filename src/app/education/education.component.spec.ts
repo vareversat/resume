@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { instance, mock, when } from 'ts-mockito';
 
 import { EducationComponent } from './education.component';
@@ -11,7 +11,7 @@ describe('EducationComponent', () => {
   let fixture: ComponentFixture<EducationComponent>;
   let mockedJsonService: JsonService;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     mockedJsonService = mock(JsonService);
     when(mockedJsonService.getJSON('../../assets/data/education.json')).thenReturn(new Observable());
     TestBed.configureTestingModule({
