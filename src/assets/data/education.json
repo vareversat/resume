@@ -1,6 +1,16 @@
 [
   {
-    "place": "UTBM Belfort-Montbéliard",
+    "place": "Akademia Górniczo-Hutnicza (AGH)",
+    "place_city": "Krakow",
+    "place_region": "Lesser Poland Province",
+    "place_country": "Poland",
+    "diploma": "IT Engineer - ERASMUS Student",
+    "year_from": "oct. 2020",
+    "year_to": "feb. 2021",
+    "website": "https://www.agh.edu.pl//"
+  },
+  {
+    "place": "Université de Technologie de Belfort-Montbéliard (UTBM)",
     "place_city": "Belfort",
     "place_region": "Bourgogne-Franche-Comté",
     "place_country": "France",
