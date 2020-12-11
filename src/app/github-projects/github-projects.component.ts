@@ -17,7 +17,7 @@ export class GitHubProjectsComponent implements OnInit {
   public transitionController = new TransitionController();
   public projects: any;
   public areProjectsLoaded = false;
-  private user = "vareversat";
+  private user = "UTBM-AGH-courses";
   private sortBy = "updated";
   public errorMessage: string = "";
   private pageSize = 5;
