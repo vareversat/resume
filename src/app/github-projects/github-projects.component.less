@@ -2,8 +2,25 @@
 
 .github-projects {
   #owner-picker {
-    padding: 1em 8em;
     text-align: center;
+  }
+
+  @media (min-width: 900px) {
+    #owner-picker {
+      display: flex;
+    }
+    #mobile-owner-picker {
+      display: none;
+    }
+  }
+
+  @media (max-width: 900px) {
+    #owner-picker {
+      display: none;
+    }
+    #mobile-owner-picker {
+      display: flex;
+    }
   }
 
   #error {
