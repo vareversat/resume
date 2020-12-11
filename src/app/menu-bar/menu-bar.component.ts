@@ -11,7 +11,7 @@ import * as _ from "lodash";
 })
 export class MenuBarComponent implements OnInit {
   public show = false;
-  public app_version = environment.app_version;
+  public app_version = "🚀 " + environment.app_version;
   constructor(private router: Router) {
     this.router = router;
   }

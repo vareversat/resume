@@ -45,7 +45,7 @@
     <b>{{ selectedPage }}</b>
   </div>
   <p id="app-version">
-    <b>🚀 {{ app_version }}</b>
+    <b>{{ app_version }}</b>
   </p>
   <button
     id="menu-button"
@@ -114,20 +114,9 @@
               </h3></a
             >
           </div>
-          <div class="row">
-            <a
-              (click)="hideMenu()"
-              routerLink="/gitlab-projects"
-              [ngClass]="{ active: selectedPage === 'gitlab-projects' }"
-            >
-              <h3>
-                <i class="small icon chevron right"> </i>gitlab-projects
-              </h3></a
-            >
-          </div>
           <div class="ui centered row">
             <p id="mobile-app-version">
-              <b>🥤 {{ app_version }}</b>
+              <b>{{ app_version }}</b>
             </p>
           </div>
         </div>
