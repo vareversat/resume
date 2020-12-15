@@ -14,9 +14,9 @@
     "place_city": "Belfort",
     "place_region": "Bourgogne-Franche-Comté",
     "place_country": "France",
-    "diploma": "IT Engineer",
+    "diploma": "IT Engineer - Apprentice",
     "year_from": "2018",
-    "year_to": "today",
+    "year_to": "2021",
     "website": "https://www.utbm.fr/"
   },
   {
@@ -38,15 +38,5 @@
     "year_from": "2015",
     "year_to": "2016",
     "website": "https://fr.wikipedia.org/wiki/Lyc%C3%A9e_Blaise-Pascal_(Clermont-Ferrand)"
-  },
-  {
-    "place": "Lycée Chaptal",
-    "place_city": "Mende",
-    "place_region": "Occitanie",
-    "place_country": "France",
-    "diploma": "Scientific Bachelor degree",
-    "year_from": "2014",
-    "year_to": "2015",
-    "website": "https://www.lyc-chaptal-mende.ac-montpellier.fr/"
   }
 ]
