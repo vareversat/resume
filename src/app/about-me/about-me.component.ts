@@ -56,7 +56,7 @@ export class AboutMeComponent implements OnInit {
   }
 
   public getLanguages() {
-    var languages = " | ";
+    var languages = "";
     if (this.profile !== null) {
       for (const language of this.profile.languages) {
         languages += language.lang + " (" + language.level + ")" + " | ";
