@@ -1,16 +1,9 @@
 <div id="project-widget" class="project item">
   <div class="content">
-    <a
-      class="header"
-      target="_blank"
-      rel="noopener noreferrer"
-      href="{{ project.web_url }} "
-    >
-      <h2>
-        <i class="fitted icon chevron right"></i>
-        {{ project.name }}
-      </h2>
-    </a>
+    <app-twitch-like-link
+      [link]="project.web_url"
+      [text]="project.name"
+    ></app-twitch-like-link>
 
     <div class="description">
       <p>{{ project.description }}</p>
