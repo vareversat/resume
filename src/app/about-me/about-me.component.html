@@ -19,14 +19,13 @@
           </div>
         </h1>
         <p id="bio" [innerHTML]="getBio()"></p>
-        <div [suiTransition]="buttonsTransition" class="ui large buttons">
-          <div
-            (click)="goToURL(link.link)"
-            class="ui {{ link.color }} button"
+        <div id="links" [suiTransition]="buttonsTransition">
+          <app-twitch-like-link
             *ngFor="let link of getLinks(); let i = index"
-          >
-            <i class="{{ link.icon }}"></i>
-          </div>
+            [style]="getBackgroundColor(link)"
+            [link]="link.link"
+            [text]="link.text"
+          ></app-twitch-like-link>
         </div>
       </div>
     </div>

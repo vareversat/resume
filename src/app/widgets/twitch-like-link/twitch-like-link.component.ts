@@ -9,6 +9,7 @@ export class TwitchLikeLinkComponent implements OnInit {
 
   @Input() link: string;
   @Input() text: string;
+  @Input() style: string;
 
   constructor() {}
 

@@ -5,7 +5,7 @@ import {
   Transition,
   TransitionDirection,
 } from "ng2-semantic-ui";
-import * as _ from 'lodash';
+import * as _ from "lodash";
 
 @Component({
   selector: "app-about-me",
@@ -16,6 +16,9 @@ export class AboutMeComponent implements OnInit {
   public imageTransition = new TransitionController();
   public buttonsTransition = new TransitionController();
   public profile: any = null;
+  public styles = {
+    "background-color": "lime",
+  };
 
   constructor(private jsonService: JsonService) {
     this.jsonService
@@ -45,14 +48,18 @@ export class AboutMeComponent implements OnInit {
 
   public getBio() {
     if (this.profile !== null) {
-      return this.profile.bio
+      return this.profile.bio;
     }
   }
 
   public getLinks() {
     if (this.profile !== null) {
-      return this.profile.links
+      return this.profile.links;
     }
+  }
+
+  public getBackgroundColor(link) {
+    return {"background-color": link.color,};
   }
 
   public getLanguages() {
