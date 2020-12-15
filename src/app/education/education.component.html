@@ -12,14 +12,7 @@
           <h1>{{ education.diploma }}</h1>
         </div>
         <div>
-          <a
-            class="place"
-            target="_blank"
-            rel="noopener noreferrer"
-            href="{{ education.website }} "
-          >
-            <h3><i class="small icon chevron right"></i>{{ education.place }}</h3>
-          </a>
+          <app-twitch-like-link [link]="education.website" [text]="education.place"></app-twitch-like-link>
           <p>
             <i class="map pin icon"></i>
             {{ education.place_city }}, {{ education.place_region }},

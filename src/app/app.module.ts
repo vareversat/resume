@@ -13,6 +13,7 @@ import { WorkComponent } from './work/work.component';
 import { JsonService } from './json.service';
 import { ApiService } from './api.service';
 import { ProjectWidgetComponent } from './project-widget/project-widget.component';
+import { TwitchLikeLinkComponent } from './widgets/twitch-like-link/twitch-like-link.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ProjectWidgetComponent } from './project-widget/project-widget.componen
     SkillsComponent,
     MenuBarComponent,
     WorkComponent,
-    ProjectWidgetComponent
+    ProjectWidgetComponent,
+    TwitchLikeLinkComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, SuiModule],
   providers: [JsonService, ApiService],
