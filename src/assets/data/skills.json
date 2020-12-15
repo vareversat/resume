@@ -4,11 +4,11 @@
     "icon": "terminal",
     "talents": [
       {"name": "Java", "percentage": "90"},
+      {"name": "Dart", "percentage": "80"},
       {"name": "TypeScript / JavaScript", "percentage": "75"},
-      {"name": "C#", "percentage": "70"},
-      {"name": "Dart", "percentage": "70"},
-      {"name": "Python", "percentage": "65"},
-      {"name": "Shell", "percentage": "55"}
+      {"name": "Shell", "percentage": "70"},
+      {"name": "Python", "percentage": "55"},
+      {"name": "C#", "percentage": "55"}
     ]
   },
   {
@@ -35,16 +35,17 @@
     "title": "Data base skills",
     "icon": "database",
     "talents": [
-      {"name": "Oracle SQL", "percentage": "80"},
-      {"name": "MongoDB", "percentage": "75"},
-      {"name": "MySQL", "percentage": "70"}
+      {"name": "MongoDB", "percentage": "80"},
+      {"name": "Oracle SQL", "percentage": "75"},
+      {"name": "MySQL", "percentage": "70"},
+      {"name": "PostgreSQL", "percentage": "70"}
     ]
   },
   {
     "title": "Development tools",
     "icon": "wrench",
     "talents": [
-      {"name": "IDEA IntelliJ", "percentage": "90"},
+      {"name": "Jetbrain softwares", "percentage": "90"},
       {"name": "Git (Github / Gitlab)", "percentage": "85"},
       {"name": "Visual Code", "percentage": "70"},
       {"name": "Postman", "percentage": "70"}
