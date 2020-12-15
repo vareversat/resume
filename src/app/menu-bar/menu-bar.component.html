@@ -34,7 +34,7 @@
         routerLink="/github-projects"
         [ngClass]="{ active: selectedPage === 'github-projects' }"
       >
-        <i class="github icon"></i>
+        <i class="fas fa-code-branch"></i>
       </a>
       <a class="active item">
         {{ selectedPage }}
@@ -44,9 +44,9 @@
   <div id="display-selected-page" class="ui inverted segment">
     <b>{{ selectedPage }}</b>
   </div>
-  <p id="app-version">
-    <b>{{ app_version }}</b>
-  </p>
+  <a target="_blank" rel="noopener noreferrer" href="{{ repo_link }}">
+    <p id="app-version"><b>{{ app_version }}</b></p>
+  </a>
   <button
     id="menu-button"
     (click)="showMenu()"
@@ -115,9 +115,9 @@
             >
           </div>
           <div class="ui centered row">
-            <p id="mobile-app-version">
-              <b>{{ app_version }}</b>
-            </p>
+            <a target="_blank" rel="noopener noreferrer" href="{{ repo_link }}">
+              <p id="app-version"><b>{{ app_version }}</b></p>
+            </a>
           </div>
         </div>
       </div>
