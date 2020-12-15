@@ -12,7 +12,7 @@ import { MenuBarComponent } from './menu-bar/menu-bar.component';
 import { WorkComponent } from './work/work.component';
 import { JsonService } from './json.service';
 import { ApiService } from './api.service';
-import { ProjectWidgetComponent } from './project-widget/project-widget.component';
+import { ProjectWidgetComponent } from './widgets/project-widget/project-widget.component';
 import { TwitchLikeLinkComponent } from './widgets/twitch-like-link/twitch-like-link.component';
 
 @NgModule({
