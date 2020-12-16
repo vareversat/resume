@@ -21,7 +21,7 @@ export class WorkComponent implements OnInit {
     });
   }
 
-  public animate(transitionName: string = 'slide left') {
+  public animate(transitionName: string = 'fade down') {
     this.transitionController.animate(
       new Transition(transitionName, 900, TransitionDirection.In)
     );
