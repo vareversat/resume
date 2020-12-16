@@ -1,11 +1,11 @@
 name: Resume - CI
 on:
   push:
-    tags:        
+    tags:
       - v*
 jobs:
   build:
-    name: Build 
+    name: Build
     runs-on: ubuntu-latest
     container: devosud/angular-workflow:latest
     steps:
@@ -16,7 +16,7 @@ jobs:
       - name: 'Build for production'
         run: ng build --prod
   test:
-    name: Test 
+    name: Test
     runs-on: ubuntu-latest
     container: devosud/angular-workflow:latest
     steps:
@@ -28,12 +28,12 @@ jobs:
         run: ng test
   deploy:
     needs: [ build, test ]
-    name: Deploy 
+    name: Deploy
     runs-on: ubuntu-latest
     container: devosud/angular-workflow:latest
     steps:
       - name: 'Checkout source code'
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.3.4
         with:
           fetch-depth: 0
       - name: 'Tag with the current version'
