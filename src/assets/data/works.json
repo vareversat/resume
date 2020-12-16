@@ -3,6 +3,7 @@
     "place": "Besançon",
     "country": "France",
     "company_name": "SKINSoft",
+    "link": "https://skinsoft.fr",
     "company_description": "Little company located in the East of France specialized in the development of full web solutions for collections management",
     "missions": [
       {
@@ -26,6 +27,7 @@
     "place": "Guangzhou City",
     "country": "China",
     "company_name": "广州安方生物科技有限公司 (Guangzhou Anfang Bio-technology Co., Ltd)",
+    "link": "https://www.linkedin.com/company/%E5%B9%BF%E5%B7%9E%E5%AE%89%E6%96%B9%E7%94%9F%E7%89%A9%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/",
     "company_description": "Company located in the North East of Guangzhou specialized in the conception and development of 'nano filters' used to filter the cancer cells form the blood",
     "missions": [
       {
@@ -39,6 +41,7 @@
     "place": "Meyrueis",
     "country": "France",
     "company_name": "SAS Marinico",
+    "link": "https://www.societe.com/societe/marinico-828830901.html",
     "company_description": "Little restaurant located in the south of France",
     "missions": [
       {
