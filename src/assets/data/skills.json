@@ -17,7 +17,9 @@
     "talents": [
       {"name": "Flutter", "percentage": "80"},
       {"name": "Spring", "percentage": "75"},
-      {"name": "Django", "percentage": "70"}
+      {"name": "VueJS", "percentage": "75"},
+      {"name": "Angular", "percentage": "70"},
+      {"name": "Django", "percentage": "65"}
     ]
   },
   {
