@@ -14,6 +14,7 @@ import { JsonService } from './json.service';
 import { ApiService } from './api.service';
 import { ProjectWidgetComponent } from './widgets/project-widget/project-widget.component';
 import { TwitchLikeLinkComponent } from './widgets/twitch-like-link/twitch-like-link.component';
+import { TwitchLikeLinkMenuComponent } from './widgets/twitch-like-link-menu/twitch-like-link-menu.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { TwitchLikeLinkComponent } from './widgets/twitch-like-link/twitch-like-
     MenuBarComponent,
     WorkComponent,
     ProjectWidgetComponent,
-    TwitchLikeLinkComponent
+    TwitchLikeLinkComponent,
+    TwitchLikeLinkMenuComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, SuiModule],
   providers: [JsonService, ApiService],

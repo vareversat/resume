@@ -12,7 +12,7 @@ import * as _ from "lodash";
 export class MenuBarComponent implements OnInit {
   public show = false;
   public app_version = "🚀 " + environment.app_version;
-  public repo_link = "https://github.com/devosud/resume";
+  public repo_link = "https://github.com/vareversat/resume";
   constructor(private router: Router) {
     this.router = router;
   }

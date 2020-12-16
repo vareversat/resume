@@ -1,6 +1,9 @@
 @import url("../../styles.less");
 
-.menu-bar {
+#menu-bar {
+  app-twitch-like-link-menu {
+    padding-right: 0.5em;
+  }
   #menu-button {
     z-index: 999;
     right: 2em;
@@ -53,23 +56,11 @@
     }
   }
 
-  .ui.inverted.segment {
+  #wide-menu {
     z-index: 100;
     position: fixed;
     top: 1.5em;
     left: 1.5em;
 
-    .item {
-      font-family: @font;
-      font-weight: bold;
-    }
-    .ui.inverted.menu {
-      .item:last-child {
-        border-radius: 0 0.28571429rem 0.28571429rem 0;
-      }
-      .item:last-child:before {
-        background: transparent;
-      }
-    }
   }
 }
