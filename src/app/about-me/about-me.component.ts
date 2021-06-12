@@ -15,6 +15,7 @@ import * as _ from "lodash";
 export class AboutMeComponent implements OnInit {
   public imageTransition = new TransitionController();
   public buttonsTransition = new TransitionController();
+  public buttonsTransition2 = new TransitionController();
   public profile: any = null;
   public styles = {
     "background-color": "lime",
@@ -42,7 +43,11 @@ export class AboutMeComponent implements OnInit {
 
   public getAge() {
     if (this.profile !== null) {
-      return this.profile.age;
+      let today = new Date();
+      let yearOfBirth = new Date(this.profile.year_of_birth)
+      let age = today.valueOf() - yearOfBirth.valueOf()
+      let ageDate = new Date(age)
+      return Math.abs(ageDate.getUTCFullYear() - 1970);
     }
   }
 
@@ -55,6 +60,12 @@ export class AboutMeComponent implements OnInit {
   public getLinks() {
     if (this.profile !== null) {
       return this.profile.links;
+    }
+  }
+
+  public getDownloadLinks() {
+    if (this.profile !== null) {
+      return this.profile.download_links;
     }
   }
 
@@ -77,6 +88,9 @@ export class AboutMeComponent implements OnInit {
       new Transition("fade down", 900, TransitionDirection.In)
     );
     this.buttonsTransition.animate(
+      new Transition("fade left", 900, TransitionDirection.In)
+    );
+    this.buttonsTransition2.animate(
       new Transition("fade left", 900, TransitionDirection.In)
     );
   }

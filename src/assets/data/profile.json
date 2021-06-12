@@ -1,8 +1,8 @@
 {
   "first_name": "Valentin",
   "last_name": "REVERSAT",
-  "age": "23",
-  "bio": "Young, dynamic and meticoulus apprentice currently working at <b>SKINSoft</b>, a little french tech company and studying in the <b>UTBM</b>, a french engineering school. My studies and my work experiences in various companies and countries allow me to develop my teamwork and my adaptability skills. I spend my 2020 autumn semester in the AGH University in Krakow, Poland",
+  "year_of_birth": "1997-04-22",
+  "bio": "Young, dynamic and meticoulus apprentice currently working at <b>SKINsoft</b>, a little french tech company and studying in the <b>UTBM</b>, a french engineering school. My studies and my work experiences in various companies and countries allow me to develop my teamwork and my adaptability skills. I spend my 2020 autumn semester in the <b>AGH</b> University in Krakow, Poland",
   "languages": [
     { "lang": "French", "level": "Mother tongue" },
     { "lang": "English", "level": "C1, fluent" }
@@ -30,6 +30,18 @@
       "link": "https://github.com/vareversat",
       "color": "#2B3137",
       "text": "Github"
+    }
+  ],
+  "download_links": [
+    {
+      "link": "https://atlas.dev-o-sud.fr/drive/d/f/619264513400681822",
+      "color": "#F2711C",
+      "text": "CV - 🇫🇷"
+    },
+    {
+      "link": "https://atlas.dev-o-sud.fr/drive/d/f/482593461889933358",
+      "color": "#F2711C",
+      "text": "Resume - 🇬🇧"
     }
   ]
 }

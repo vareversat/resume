@@ -26,6 +26,14 @@
             [text]="link.text"
           ></app-twitch-like-link>
         </div>
+        <div id="download_links" [suiTransition]="buttonsTransition2">
+          <app-twitch-like-link
+            *ngFor="let link of getDownloadLinks(); let i = index"
+            [style]="getBackgroundColor(link)"
+            [link]="link.link"
+            [text]="link.text"
+          ></app-twitch-like-link>
+        </div>
       </div>
     </div>
   </div>
