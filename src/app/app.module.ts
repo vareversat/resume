@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -29,6 +29,7 @@ import { TwitchLikeLinkMenuComponent } from './widgets/twitch-like-link-menu/twi
     TwitchLikeLinkComponent,
     TwitchLikeLinkMenuComponent
   ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, SuiModule],
   providers: [JsonService, ApiService],
   bootstrap: [AppComponent]
