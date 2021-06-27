@@ -34,10 +34,6 @@ jobs:
     steps:
       - name: 'Checkout source code'
         uses: actions/checkout@v2.3.4
-        with:
-          fetch-depth: 0
-      - name: 'Tag with the current version'
-        run: sed -i "s/0.0.0/`git describe --long`/g" package.json
       - name: 'Install dependencies'
         run: npm install
       - name: 'Build for production'
