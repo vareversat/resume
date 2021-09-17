@@ -1,15 +1,15 @@
-import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { Observable, throwError } from "rxjs";
-import { retry, catchError } from "rxjs/operators";
+import { Injectable } from "@angular/core";
+import { throwError } from "rxjs";
+import { catchError } from "rxjs/operators";
 
 @Injectable({
   providedIn: "root",
 })
 export class ApiService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
   public getOnUrl(url: string) {
-    return this.http.get(url).pipe(catchError(this.handleError));
+    return this.http.get(url, { headers: { 'Authorization': 'token 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' } }).pipe(catchError(this.handleError));
   }
 
   handleError(error) {
