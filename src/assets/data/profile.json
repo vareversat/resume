@@ -2,19 +2,11 @@
   "first_name": "Valentin",
   "last_name": "REVERSAT",
   "year_of_birth": "1997-04-22",
-  "bio": "Young, dynamic and meticoulus apprentice currently working at <b>SKINsoft</b>, a little french tech company and studying in the <b>UTBM</b>, a french engineering school. My studies and my work experiences in various companies and countries allow me to develop my teamwork and my adaptability skills. I spend my 2020 autumn semester in the <b>AGH</b> University in Krakow, Poland",
+  "bio": "Hi ! I'm Valentin, a young IT engineer living in Bordeaux 🍷, <br> France. Please use the links below to learn more about me.",
   "languages": [
-    { "lang": "French", "level": "Mother tongue" },
-    { "lang": "English", "level": "C1, fluent" }
+    { "lang": "🇫🇷", "level": "Mother tongue" },
+    { "lang": "🇬🇧", "level": "C1, fluent" }
   ],
-  "address": {
-    "number": "102 A",
-    "street": "rue de Belfort",
-    "city": "BESANCON",
-    "zip_code": "25000",
-    "country": "France"
-  },
-  "phone": "+33 6 88 63 44 73",
   "links": [
     {
       "link": "https://api.whatsapp.com/send?phone=33688634473&text=Hi!&source=&data=",

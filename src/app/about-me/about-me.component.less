@@ -1,8 +1,18 @@
 @import url('../../styles.less');
 
 .about-me {
-  #languages-and-age {
-    text-align: center;
+
+  @media (min-width: 900px) {
+    padding-top: 100px;
+    padding-left: 100px;
+  }
+
+  @media (max-width: 900px) {
+  }
+
+
+  .row {
+    justify-content: left;
   }
 
   #bio {
@@ -19,7 +29,11 @@
     font-size: 2vmin !important;
   }
 
-  #download_links {
-    padding-top: 2em;
+  .links {
+    .row {
+      padding: 0 !important;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
   }
 }

@@ -5,13 +5,13 @@
   <div *ngIf="!areProjectsLoaded" class="ui active centered huge loader"></div>
   <div id="owner-picker">
     <div class="two ui buttons">
-      <button [ngClass]="{ active: user === 'vareversat' }" (click)="setUser('vareversat')" class="ui inverted large button">My own repos</button>
-      <button [ngClass]="{ active: user === 'UTBM-AGH-courses' }" (click)="setUser('UTBM-AGH-courses')" class="ui inverted large button">University project repos</button>
+      <button [ngClass]="{ active: user === 'vareversat' }" (click)="setUser('vareversat')" class="ui inverted large button">Personal</button>
+      <button [ngClass]="{ active: user === 'UTBM-AGH-courses' }" (click)="setUser('UTBM-AGH-courses')" class="ui inverted large button">University projects</button>
     </div>
   </div>
   <div *ngIf="areProjectsLoaded" class="ui items" [suiTransition]="transitionController">
 
-    <div *ngFor="let project of projects; let i = index" class="project item">
+    <div *ngFor="let project of projects; let i = index">
       <app-project-widget [project]="project"></app-project-widget>
     </div>
   </div>

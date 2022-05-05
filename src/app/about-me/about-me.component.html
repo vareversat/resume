@@ -2,33 +2,21 @@
   <div class="ui stackable centered divided grid">
     <div class="row">
       <div class="thirteen wide column">
-        <img
-          [suiTransition]="imageTransition"
-          class="ui large circular left floated image"
-          src="../../assets/me.jpg"
-        />
+        <img [suiTransition]="imageTransition" class="ui large circular left floated image" src="../../assets/me.jpg" />
         <h1 class="ui header">
           <div class="content">
             <h1>{{ getFirstName() }} {{ getLastName() }}</h1>
             <div class="sub header languages">
               <p id="languages-and-age">
-                <i>{{ getLanguages() }} {{ getAge() }} years old</i>
+                {{ getLanguages() }} {{ getAge() }} years old
               </p>
             </div>
           </div>
         </h1>
         <p id="bio" [innerHTML]="getBio()"></p>
-        <div id="links" [suiTransition]="buttonsTransition">
+      <div id="links" [suiTransition]="buttonsTransition">
           <app-twitch-like-link
             *ngFor="let link of getLinks(); let i = index"
-            [style]="getBackgroundColor(link)"
-            [link]="link.link"
-            [text]="link.text"
-          ></app-twitch-like-link>
-        </div>
-        <div id="download_links" [suiTransition]="buttonsTransition2">
-          <app-twitch-like-link
-            *ngFor="let link of getDownloadLinks(); let i = index"
             [style]="getBackgroundColor(link)"
             [link]="link.link"
             [text]="link.text"

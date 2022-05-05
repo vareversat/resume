@@ -1,32 +1,23 @@
-<div id="project-widget" class="project item">
-  <div class="content">
-    <app-twitch-like-link
-      [link]="project.web_url"
-      [text]="project.name"
-    ></app-twitch-like-link>
-
-    <div class="description">
-      <p>{{ project.description }}</p>
+<div id="project-widget" class="ui middle aligned stackable three column centered grid">
+  <div class="row">
+    <div class="right aligned column">
+      <app-twitch-like-link [link]="project.web_url" [text]="project.name"></app-twitch-like-link>
     </div>
-    <div class="extra">
-      <div
-        *ngFor="let language of project.languages; let i = index"
-        class="ui large purple label"
-      >
-        {{ language.language }}
-        <div class="detail">{{ language.distribution }}%</div>
+    <div class="column">
+      <div class="ui grid">
+        <div class="row">
+          <p>{{ project.description }}</p>
+        </div>
+        <div class="row">
+          <div class="column">
+            <div *ngFor="let language of project.languages; let i = index" class="ui large purple label">
+              {{ language.language }}
+              <div class="detail">{{ language.distribution }}%</div>
+            </div>
+        </div>
+        </div>
       </div>
-      <br />
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="{{ user.web_url }} "
-        *ngFor="let user of project.users; let i = index"
-        class="ui large orange image label"
-      >
-        <img src="{{ user.avatar_url }}" />
-        {{ user.username }}
-      </a>
     </div>
   </div>
+
 </div>

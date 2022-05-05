@@ -1,5 +1,19 @@
 [
   {
+    "place": "Bordeaux",
+    "country": "France",
+    "company_name": "FLOA Bank",
+    "link": "https://floabank.fr",
+    "company_description": "FLOA Bank offers several financing and payment services for individuals and e-commerce professionals.",
+    "missions": [
+      {
+        "name": "DevOps Engineer",
+        "periods": [{"from": "oct. 2021", "to": "today"}],
+        "description": "In charge of the management, the monitoring and the live sytem support of the production. Maintenance of several Kubernetes clusters and VM deployed via Terraform. Monitoring via ELK, Grafana and Dynatrace"
+      }
+    ]
+  },
+  {
     "place": "Besançon",
     "country": "France",
     "company_name": "SKINsoft",
@@ -8,17 +22,17 @@
     "missions": [
       {
         "name": "System administrator",
-        "periods": [{"from": "apr. 2018", "to": "today"}],
+        "periods": [{"from": "apr. 2018", "to": "aug. 2021"}],
         "description": "In charge of the management, the monitoring and installation of the servers and the virtual machines for our clients"
       },
       {
         "name": "Fullstack developer",
-        "periods": [{"from": "sept. 2018", "to": "today"}],
+        "periods": [{"from": "sept. 2018", "to": "aug. 2021"}],
         "description": "Project : Implementation in the current application of a history procedure of the users changes in items records using a REST API (on my GitHub)\nBackend stack :\n- Java (Spring) / MongoDB / ElasticSearch / Docker\nFrontend stack : \n- JavaScript (VueJS) / TypeScript / HTML / CSS"
       },
       {
         "name": "IT engineer",
-        "periods": [{"from": "sept. 2018", "to": "today"}],
+        "periods": [{"from": "sept. 2018", "to": "aug. 2021"}],
         "description": "IT apprentice engineer with the UTBM engineering school "
       }
     ]

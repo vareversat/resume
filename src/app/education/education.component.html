@@ -1,15 +1,15 @@
 <div class="education">
   <div
-    class="ui stackable centered grid"
+    class="ui middle aligned stackable centered grid"
     [suiTransition]="transitionController"
   >
     <div
       *ngFor="let education of educations; let i = index"
-      class="sixteen wide column"
+      class="row"
     >
       <div class="row">
         <div class="ui header">
-          <h1>{{ education.diploma }}</h1>
+          <h2>{{ education.diploma }}</h2>
         </div>
         <div>
           <app-twitch-like-link

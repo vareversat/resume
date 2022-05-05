@@ -44,7 +44,6 @@ export class GitHubProjectsComponent implements OnInit {
           this.projects = projects;
           for (const project of this.projects) {
             this.getLanguages(project);
-            this.getUsersOfProject(project);
             this.formatWebUrl(project);
           }
           this.animate();
@@ -103,20 +102,6 @@ export class GitHubProjectsComponent implements OnInit {
 
   formatWebUrl(project: any) {
     _.set(project, 'web_url', _.get(project, 'html_url', null))
-  }
-
-  async getUsersOfProject(project: any) {
-    await this.apiService
-      .getOnUrl(
-        "https://api.github.com/repos/" +
-        this.user +
-        "/" +
-        project.name +
-        "/assignees"
-      )
-      .subscribe((users) => {
-        _.set(project, "users", this.formatUsers(users));
-      });
   }
 
   formatUsers(users: any) {

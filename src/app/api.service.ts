@@ -9,7 +9,7 @@ import { catchError } from "rxjs/operators";
 export class ApiService {
   constructor(private http: HttpClient) { }
   public getOnUrl(url: string) {
-    return this.http.get(url, { headers: { 'Authorization': 'token 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' } }).pipe(catchError(this.handleError));
+    return this.http.get(url, { headers: { 'Authorization': 'token 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' } }).pipe(catchError(this.handleError));
   }
 
   handleError(error) {
