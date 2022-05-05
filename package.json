@@ -1,6 +1,6 @@
 {
   "name": "resume",
-  "version": "v2.3.2",
+  "version": "v2.5.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
