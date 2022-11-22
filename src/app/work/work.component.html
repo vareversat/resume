@@ -1,33 +1,26 @@
 <div id="works" [suiTransition]="transitionController">
-  <div class="ui middle aligned stackable four column centered grid">
+  <div class="ui middle aligned stackable four column centered vertically divided grid">
     <div *ngFor="let work of works; let i = index" class="row">
       <div class="column">
         <h1 class="ui center aligned header">
-          <app-twitch-like-link
-            [text]="work.company_name"
-            [link]="work.link"
-          ></app-twitch-like-link>
-        </h1 >
-        <p class="location">
-          <i class="map pin icon"></i>
-          {{ work.place }}, {{ work.country }}
-        </p>
+          <app-twitch-like-link [text]="work.company_name" [link]="work.link"></app-twitch-like-link>
+        </h1>
+        <a target="_blank" rel="noopener noreferrer" href="{{ work.map_link }}">
+          <p class="location">
+            <i class="map pin icon"></i>
+            <u>{{ work.place }}, {{ work.country }}</u>
+          </p>
+        </a>
         <p>{{ work.company_description }}</p>
       </div>
       <div class="column">
-        <div
-          class="mission"
-          *ngFor="let mission of work.missions; let i = index"
-        >
+        <div class="mission" *ngFor="let mission of work.missions; let i = index">
           <h3 class="ui header">{{ mission.name }}</h3>
           <div class="description">
             <p>
               <i>{{ mission.description }}</i>
             </p>
-            <div
-              *ngFor="let period of mission.periods; let i = index"
-              class="ui large purple label"
-            >
+            <div *ngFor="let period of mission.periods; let i = index" class="ui large purple label">
               {{ period.from }}
               <div *ngIf="period.to" class="detail">{{ period.to }}</div>
             </div>
