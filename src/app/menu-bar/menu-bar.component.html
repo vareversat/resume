@@ -25,12 +25,6 @@
         text="Skills"
         icon="fas fa-star"
       ></app-twitch-like-link-menu>
-      <app-twitch-like-link-menu
-        routerLink="/github-projects"
-        [selected]="selectedPage === 'github-projects'"
-        text="Github"
-        icon="fas fa-code-branch"
-      ></app-twitch-like-link-menu>
       </div>
   </div>
   <div id="display-selected-page" class="ui inverted segment">
@@ -95,17 +89,6 @@
               [ngClass]="{ active: selectedPage === 'skills' }"
             >
               <h3><i class="small icon chevron right"> </i>skills</h3></a
-            >
-          </div>
-          <div class="row">
-            <a
-              (click)="hideMenu()"
-              routerLink="/github-projects"
-              [ngClass]="{ active: selectedPage === 'github-projects' }"
-            >
-              <h3>
-                <i class="small icon chevron right"> </i>github-projects
-              </h3></a
             >
           </div>
           <div class="ui centered row">
