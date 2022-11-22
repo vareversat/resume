@@ -1,5 +1,17 @@
 [
   {
+    "title": "Ops Tools",
+    "icon": "cloud",
+    "talents": [
+      {"name": "Docker", "percentage": "90"},
+      {"name": "Kubernetes", "percentage": "85"},
+      {"name": "Terraform", "percentage": "85"},
+      {"name": "Azure cloud", "percentage": "85"},
+      {"name": "KVM / Qemu", "percentage": "70"},
+      {"name": "Windows", "percentage": "60"}
+    ]
+  },
+  {
     "title": "Programming languages / Scripting",
     "icon": "terminal",
     "talents": [
@@ -21,17 +33,6 @@
       {"name": "VueJS", "percentage": "75"},
       {"name": "Angular", "percentage": "70"},
       {"name": "Django", "percentage": "65"}
-    ]
-  },
-  {
-    "title": "OS / virtualisation",
-    "icon": "cloud",
-    "talents": [
-      {"name": "Linux", "percentage": "90"},
-      {"name": "Kubernetes", "percentage": "90"},
-      {"name": "Docker", "percentage": "85"},
-      {"name": "KVM / Qemu", "percentage": "70"},
-      {"name": "Windows", "percentage": "60"}
     ]
   },
   {
