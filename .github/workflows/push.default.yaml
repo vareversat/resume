@@ -1,0 +1,15 @@
+name: Default workflow
+
+on:
+  push:
+    branches-ignore:
+      - main
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    uses: ./.github/workflows/action.pnpm.build.yaml
+    secrets: inherit

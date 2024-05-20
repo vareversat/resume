@@ -1,0 +1,19 @@
+name: Main workflow
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    uses: ./.github/workflows/action.pnpm.build.yaml
+    secrets: inherit
+  deploy:
+    needs: ['build']
+    uses: ./.github/workflows/action.netlify.deploy.yaml
+    secrets: inherit
