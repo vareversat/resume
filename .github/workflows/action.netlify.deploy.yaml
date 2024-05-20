@@ -1,0 +1,30 @@
+name: Deploy to Netlify
+on:
+  workflow_call:
+
+jobs:
+  build:
+    name: 'Build'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: true
+      - name: Download Nuxt Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: nuxt-build-output
+      - name: Build Resume
+        run: pnpm run generate
+      - name: Deploy to Netlify
+        run: netlify deploy --prod --open
+        env:
+          NETLIFY_SITE_ID: ${{secrets.NETLIFY_SITE_ID}}
+          NETLIFY_AUTH_TOKEN: ${{secrets.NETLIFY_AUTH_TOKEN}}
