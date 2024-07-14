@@ -13,7 +13,7 @@ importers:
         version: 1.7.22(vue@3.4.21)
       '@heroicons/vue':
         specifier: ^2.1.1
-        version: 2.1.4(vue@3.4.21)
+        version: 2.1.5(vue@3.4.21)
       '@nuxt/content':
         specifier: ^2.12.0
         version: 2.12.1(nuxt@3.10.3(@parcel/watcher@2.4.1)(@types/node@20.11.25)(encoding@0.1.13)(rollup@4.12.1)(terser@5.29.1)(vite@5.1.5(@types/node@20.11.25)(terser@5.29.1)))(rollup@4.12.1)(vue@3.4.21)
@@ -581,8 +581,8 @@ packages:
     peerDependencies:
       vue: ^3.2.0
 
-  '@heroicons/vue@2.1.4':
-    resolution: {integrity: sha512-wykVSZ/fqEG49lIeHgFGT9TCvBw9THuRTtA/sPp7FVk3iBob/HcmitMcLDwtXOW82TXb38HeLRl1/pcElPeSdg==}
+  '@heroicons/vue@2.1.5':
+    resolution: {integrity: sha512-IpqR72sFqFs55kyKfFS7tN+Ww6odFNeH/7UxycIOrlVYfj4WUGAdzQtLBnJspucSeqWFQsKM0g0YrgU655BEfA==}
     peerDependencies:
       vue: '>= 3'
 
@@ -5011,7 +5011,7 @@ snapshots:
       '@tanstack/vue-virtual': 3.8.1(vue@3.4.21)
       vue: 3.4.21
 
-  '@heroicons/vue@2.1.4(vue@3.4.21)':
+  '@heroicons/vue@2.1.5(vue@3.4.21)':
     dependencies:
       vue: 3.4.21
 
