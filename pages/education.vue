@@ -66,7 +66,7 @@ const educations = [
     "from": "oct. 2020",
     "to": "feb. 2021",
     "website": "https://www.agh.edu.pl/",
-    "logo": "https://pbs.twimg.com/profile_images/1272488485702811648/HpwLcUTL_400x400.jpg",
+    "logo": "/images/agh.jpg",
     "description": "\n" +
       "During my final six months as a student at UTBM, I had the enriching opportunity to participate in the ERASMUS program, " +
       "venturing to the AGH University in Krakow, Poland. This experience was a true learning adventure, " +
@@ -83,7 +83,7 @@ const educations = [
     "place_country": "France",
     "country_icon": "i-circle-flags-fr",
     "diploma": "IT Engineer",
-    "logo": "https://i0.wp.com/bibliotheque.utbm.fr/wp-content/uploads/2015/04/logo_utbm_seul.png?ssl=1",
+    "logo": "/images/utbm.webp",
     "from": "2018",
     "to": "2021",
     "website": "https://www.utbm.fr/",
@@ -100,7 +100,7 @@ const educations = [
     "place_country": "France",
     "country_icon": "i-circle-flags-fr",
     "diploma": "Two-year University diploma in computer Science",
-    "logo": "https://pbs.twimg.com/profile_images/1461276394114228232/ui3Mp9Tp_400x400.jpg",
+    "logo": "/images/uca.jpg",
     "from": "2016",
     "to": "2018",
     "website": "https://www.iut-clermont.fr/formations/dut-informatique/",

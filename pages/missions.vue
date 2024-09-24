@@ -82,7 +82,7 @@ const missions = [
     "country_icon": "i-circle-flags-fr",
     "map_link": "https://www.google.com/maps/place/Bordeaux/data=!4m2!3m1!1s0xd5527e8f751ca81:0x796386037b397a89?sa=X&ved=2ahUKEwi7wpul5sL7AhXOWqQEHUwCCLsQ8gF6BAh6EAE",
     "company_name": "FLOA",
-    "company_logo": "https://media.licdn.com/dms/image/D4E0BAQHsMSnCg7MlbA/company-logo_200_200/0/1692798460961/floabank_logo?e=1717632000&v=beta&t=-gHdfVQ7VVFVIFlEUNQBrqK9lsDT3i92IeZq71x_Kfg",
+    "company_logo": "/images/floa.jpg",
     "link": "https://floabank.fr",
     "company_description": "FLOA offers several financing and payment services for individuals (under the FloaBank brand) and e-commerce professionals (with FloaPay).",
     "sub_missions": [
@@ -116,7 +116,7 @@ const missions = [
     "country_icon": "i-circle-flags-fr",
     "map_link": "https://www.google.com/maps/place/25000+Besan%C3%A7on/@47.2463512,5.8814638,8.13z/data=!4m5!3m4!1s0x478d62faf0ee130b:0x409ce34b313ed30!8m2!3d47.237829!4d6.0240539",
     "company_name": "SKINsoft",
-    "company_logo": "https://media.licdn.com/dms/image/C560BAQH2U5O7lZVAVg/company-logo_200_200/0/1641395568268/skinsoft_skinmuseum_logo?e=1717632000&v=beta&t=oN8bcYvKA9n1IZsLcZTQ07gKfLAQSBmO0gRnjZh5awU",
+    "company_logo": "/images/skinsoft.ico",
     "link": "https://skinsoft.fr",
     "company_description": "Company that specializes in creating comprehensive web-based solutions tailored for managing collections effectively.",
     "sub_missions": [
@@ -140,7 +140,7 @@ const missions = [
     "country_icon": "i-circle-flags-cn",
     "map_link": "https://www.google.com/maps?q=canton&rlz=1C1CHBF_frFR832FR832&sxsrf=ALiCzsYP6l0G-zIeXX3sAQ9E5Vt5rNRQFQ:1669154840943&uact=5&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzILCC4QgwEQsQMQgAQyCgguEIMBELEDEEMyCAgAELEDEIMBMgoIABCxAxCDARBDMgoILhDHARCvARBDMgUIABCABDIICC4QgAQQ1AIyBAgAEEMyCwgAEIAEELEDEIMBMggIABCABBCxAzoKCAAQRxDWBBCwAzoHCAAQsAMQQzoMCC4QyAMQsAMQQxgBOgQIIxAnOgQILhBDOgYIIxAnEBM6EQguEIAEELEDEIMBEMcBENEDOg4ILhCABBCxAxDHARDRAzoLCC4QsQMQgwEQ1AI6CwguEIAEELEDEIMBOgsILhCABBCxAxDUAjoICC4QgAQQsQNKBAhBGABKBAhGGAFQoQVYwwlgqgtoAXABeACAAXOIAfoDkgEDNS4xmAEAoAEByAETwAEB2gEGCAEQARgI&um=1&ie=UTF-8&sa=X&ved=2ahUKEwj-0NOt5sL7AhX-UKQEHZsLDbwQ_AUoAXoECAEQAw",
     "company_name": "广州安方生物科技有限公司",
-    "company_logo": "https://media.licdn.com/dms/image/C4D0BAQFKktG4k00mJw/company-logo_200_200/0/1630559296890?e=1717632000&v=beta&t=vLFB873oQnPmFcTIATvxoB7HPqsd1ynMkGKX5xZruoA",
+    "company_logo": "/images/anfang.jpg",
     "link": "https://www.linkedin.com/company/%E5%B9%BF%E5%B7%9E%E5%AE%89%E6%96%B9%E7%94%9F%E7%89%A9%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/",
     "company_description": "(Guangzhou Anfang Biotechnology Co., Ltd.) Company located in the North East of Guangzhou specialized in the conception and development of 'nano filters' used to filter the cancer cells form the blood.",
     "sub_missions": [
