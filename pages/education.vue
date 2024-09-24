@@ -35,11 +35,11 @@
           <div class="flex items-start space-x-4 py-4">
             <div class="flex-auto">
               <p class="text-4xl font-mono">
-                {{ education.from }}
+                {{ education.to }}
               </p>
               <Icon class="basis-1/2 md:flex-none" name="i-system-uicons-arrow-up-circle" size="2em" />
               <p class="text-4xl font-mono">
-                {{ education.to }}
+                {{ education.from }}
               </p>
             </div>
           </div>
