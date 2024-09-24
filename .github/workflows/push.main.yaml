@@ -15,5 +15,5 @@ jobs:
     secrets: inherit
   deploy:
     needs: ['build']
-    uses: ./.github/workflows/action.netlify.deploy.yaml
+    uses: ./.github/workflows/action.cloudflare.publish.yaml
     secrets: inherit
