@@ -1,8 +1,11 @@
 {
     "name": "Node.js & TypeScript",
-    "dockerFile": "Dockerfile",
+    "image": "mcr.microsoft.com/devcontainers/typescript-node:20",
     "customizations": {
         "vscode": {
+            "settings": {
+                "terminal.integrated.shell.linux": "/bin/bash"
+            },
             "extensions": [
                 "dbaeumer.vscode-eslint",
                 "bradlc.vscode-tailwindcss",
@@ -17,5 +20,6 @@
         3000,
         4000
     ],
-    "postCreateCommand": "pnpm i"
+    "preCreateCommand": "wget -qO- https://get.pnpm.io/install.sh | ENV='$HOME/.bashrc' SHELL='$(which bash)' bash -",
+    "updateContentCommand": "pnpm i"
 }
