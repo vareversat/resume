@@ -53,7 +53,7 @@ importers:
         version: 8.5.6
       tailwindcss:
         specifier: ^3.4.13
-        version: 3.4.18(yaml@2.8.2)
+        version: 3.4.19(yaml@2.8.2)
 
 packages:
 
@@ -2832,10 +2832,6 @@ packages:
     resolution: {integrity: sha512-XxwI8EOhVQgWp6iDL+3b0r86f4d6AX6zSU55HfB4ydCEuXLXc5FcYeOu+nnGftS4TEju/11rt4KJPTMgbfmv4A==}
     engines: {node: '>=10.13.0'}
 
-  glob@10.4.5:
-    resolution: {integrity: sha512-7Bv8RF0k6xjo7d4A/PxYLbUCfb6c+Vpd2/mB2yRDlew7Jb5hEXiCD9ibfO7wpk8i4sevK6DFny9h7EYbM3/sHg==}
-    hasBin: true
-
   glob@10.5.0:
     resolution: {integrity: sha512-DfXN8DfhJ7NH3Oe7cFmu3NCu1wKbkReJ8TorzSAFbSKrlNaQSKfIzqYqVY8zlbs2NLBbWpRiU52GX2PbaBVNkg==}
     hasBin: true
@@ -4089,10 +4085,6 @@ packages:
     resolution: {integrity: sha512-Q8qQfPiZ+THO/3ZrOrO0cJJKfpYCagtMUkXbnEfmgUjwXg6z/WBeOyS9APBBPCTSiDV+s4SwQGu8yFsiMRIudg==}
     engines: {node: '>=4'}
 
-  postcss-selector-parser@7.1.0:
-    resolution: {integrity: sha512-8sLjZwK0R+JlxlYcTuVnyT2v+htpdrjDOKuMcOVdYjt52Lh8hWRYpxBPoKx/Zg+bcjc3wx6fmQevMmUztS/ccA==}
-    engines: {node: '>=4'}
-
   postcss-selector-parser@7.1.1:
     resolution: {integrity: sha512-orRsuYpJVw8LdAwqqLykBj9ecS5/cRHlI5+nvTo8LcCKmzDmqVORXtOIYEEQuL9D4BxtA1lm5isAqzQZCoQ6Eg==}
     engines: {node: '>=4'}
@@ -4262,11 +4254,6 @@ packages:
   resolve-path@1.4.0:
     resolution: {integrity: sha512-i1xevIst/Qa+nA9olDxLWnLk8YZbi8R/7JPbCMcgyWaFR6bKWaexgJgEB5oc2PKMjYdrHynyz0NY+if+H98t1w==}
     engines: {node: '>= 0.8'}
-
-  resolve@1.22.10:
-    resolution: {integrity: sha512-NPRy+/ncIMeDlTAsuqwKIiferiawhefFJtkNSW0qZJEqMEb+qBt/77B/jGeeek+F0uOeN05CDa6HXbbIgtVX4w==}
-    engines: {node: '>= 0.4'}
-    hasBin: true
 
   resolve@1.22.11:
     resolution: {integrity: sha512-RfqAvLnMl313r7c9oclB1HhUEAezcpLjz95wFH4LVuhk9JF/r22qmVP9AMmOU4vMX7Q8pN8jwNg/CSpdFnMjTQ==}
@@ -4536,8 +4523,8 @@ packages:
     peerDependencies:
       postcss: ^8.4.32
 
-  sucrase@3.35.0:
-    resolution: {integrity: sha512-8EbVDiu9iN/nESwxeSxDKe0dunta1GOlHufmSSXxMD2z2/tMZpDMpvXQGsc+ajGo8y2uYUmixaSRUc/QPoQ0GA==}
+  sucrase@3.35.1:
+    resolution: {integrity: sha512-DhuTmvZWux4H1UOnWMB3sk0sbaCVOoQZjv8u1rDoTV0HTdGem9hkAZtl4JZy8P2z4Bg0nT+YMeOFyVr4zcG5Tw==}
     engines: {node: '>=16 || 14 >=14.17'}
     hasBin: true
 
@@ -4585,8 +4572,8 @@ packages:
   tailwind-merge@2.6.0:
     resolution: {integrity: sha512-P+Vu1qXfzediirmHOC3xKGAYeZtPcV9g76X+xg2FD4tYgR71ewMA35Y3sCz3zhiN/dwefRpJX0yBcgwi1fXNQA==}
 
-  tailwindcss@3.4.18:
-    resolution: {integrity: sha512-6A2rnmW5xZMdw11LYjhcI5846rt9pbLSabY5XPxo+XWdxwZaFEn47Go4NzFiHu9sNNmr/kXivP1vStfvMaK1GQ==}
+  tailwindcss@3.4.19:
+    resolution: {integrity: sha512-3ofp+LL8E+pK/JuPLPggVAIaEuhvIz4qNcf3nA1Xn2o/7fb7s/TYpHhwGDv1ZU3PkBluUVaF8PyCHcm48cKLWQ==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -5558,13 +5545,13 @@ snapshots:
     dependencies:
       mime: 3.0.0
 
-  '@csstools/selector-resolve-nested@3.1.0(postcss-selector-parser@7.1.0)':
+  '@csstools/selector-resolve-nested@3.1.0(postcss-selector-parser@7.1.1)':
     dependencies:
-      postcss-selector-parser: 7.1.0
+      postcss-selector-parser: 7.1.1
 
-  '@csstools/selector-specificity@5.0.0(postcss-selector-parser@7.1.0)':
+  '@csstools/selector-specificity@5.0.0(postcss-selector-parser@7.1.1)':
     dependencies:
-      postcss-selector-parser: 7.1.0
+      postcss-selector-parser: 7.1.1
 
   '@dxup/nuxt@0.2.2(magicast@0.5.1)':
     dependencies:
@@ -5755,9 +5742,9 @@ snapshots:
 
   '@fastify/accept-negotiator@2.0.1': {}
 
-  '@headlessui/tailwindcss@0.2.2(tailwindcss@3.4.18(yaml@2.8.2))':
+  '@headlessui/tailwindcss@0.2.2(tailwindcss@3.4.19(yaml@2.8.2))':
     dependencies:
-      tailwindcss: 3.4.18(yaml@2.8.2)
+      tailwindcss: 3.4.19(yaml@2.8.2)
 
   '@headlessui/vue@1.7.23(vue@3.5.25(typescript@5.9.2))':
     dependencies:
@@ -6459,7 +6446,7 @@ snapshots:
 
   '@nuxt/ui@2.22.3(change-case@5.4.4)(jwt-decode@4.0.0)(magicast@0.5.1)(rollup@4.53.3)(vite@7.2.7(@types/node@24.2.1)(jiti@2.6.1)(terser@5.44.1)(yaml@2.8.2))(vue@3.5.25(typescript@5.9.2))(yaml@2.8.2)(zod@3.25.76)':
     dependencies:
-      '@headlessui/tailwindcss': 0.2.2(tailwindcss@3.4.18(yaml@2.8.2))
+      '@headlessui/tailwindcss': 0.2.2(tailwindcss@3.4.19(yaml@2.8.2))
       '@headlessui/vue': 1.7.23(vue@3.5.25(typescript@5.9.2))
       '@iconify-json/heroicons': 1.2.2
       '@nuxt/icon': 1.15.0(magicast@0.5.1)(vite@7.2.7(@types/node@24.2.1)(jiti@2.6.1)(terser@5.44.1)(yaml@2.8.2))(vue@3.5.25(typescript@5.9.2))
@@ -6468,10 +6455,10 @@ snapshots:
       '@nuxtjs/tailwindcss': 6.14.0(magicast@0.5.1)(yaml@2.8.2)
       '@popperjs/core': 2.11.8
       '@standard-schema/spec': 1.0.0
-      '@tailwindcss/aspect-ratio': 0.4.2(tailwindcss@3.4.18(yaml@2.8.2))
-      '@tailwindcss/container-queries': 0.1.1(tailwindcss@3.4.18(yaml@2.8.2))
-      '@tailwindcss/forms': 0.5.10(tailwindcss@3.4.18(yaml@2.8.2))
-      '@tailwindcss/typography': 0.5.16(tailwindcss@3.4.18(yaml@2.8.2))
+      '@tailwindcss/aspect-ratio': 0.4.2(tailwindcss@3.4.19(yaml@2.8.2))
+      '@tailwindcss/container-queries': 0.1.1(tailwindcss@3.4.19(yaml@2.8.2))
+      '@tailwindcss/forms': 0.5.10(tailwindcss@3.4.19(yaml@2.8.2))
+      '@tailwindcss/typography': 0.5.16(tailwindcss@3.4.19(yaml@2.8.2))
       '@vueuse/core': 13.9.0(vue@3.5.25(typescript@5.9.2))
       '@vueuse/integrations': 13.9.0(change-case@5.4.4)(fuse.js@7.1.0)(jwt-decode@4.0.0)(vue@3.5.25(typescript@5.9.2))
       '@vueuse/math': 13.9.0(vue@3.5.25(typescript@5.9.2))
@@ -6481,7 +6468,7 @@ snapshots:
       pathe: 2.0.3
       scule: 1.3.0
       tailwind-merge: 2.6.0
-      tailwindcss: 3.4.18(yaml@2.8.2)
+      tailwindcss: 3.4.19(yaml@2.8.2)
     optionalDependencies:
       zod: 3.25.76
     transitivePeerDependencies:
@@ -6633,8 +6620,8 @@ snapshots:
       pkg-types: 2.3.0
       postcss: 8.5.6
       postcss-nesting: 13.0.2(postcss@8.5.6)
-      tailwind-config-viewer: 2.0.4(tailwindcss@3.4.18(yaml@2.8.2))
-      tailwindcss: 3.4.18(yaml@2.8.2)
+      tailwind-config-viewer: 2.0.4(tailwindcss@3.4.19(yaml@2.8.2))
+      tailwindcss: 3.4.19(yaml@2.8.2)
       ufo: 1.6.1
       unctx: 2.4.1
     transitivePeerDependencies:
@@ -7056,26 +7043,26 @@ snapshots:
 
   '@standard-schema/spec@1.0.0': {}
 
-  '@tailwindcss/aspect-ratio@0.4.2(tailwindcss@3.4.18(yaml@2.8.2))':
+  '@tailwindcss/aspect-ratio@0.4.2(tailwindcss@3.4.19(yaml@2.8.2))':
     dependencies:
-      tailwindcss: 3.4.18(yaml@2.8.2)
+      tailwindcss: 3.4.19(yaml@2.8.2)
 
-  '@tailwindcss/container-queries@0.1.1(tailwindcss@3.4.18(yaml@2.8.2))':
+  '@tailwindcss/container-queries@0.1.1(tailwindcss@3.4.19(yaml@2.8.2))':
     dependencies:
-      tailwindcss: 3.4.18(yaml@2.8.2)
+      tailwindcss: 3.4.19(yaml@2.8.2)
 
-  '@tailwindcss/forms@0.5.10(tailwindcss@3.4.18(yaml@2.8.2))':
+  '@tailwindcss/forms@0.5.10(tailwindcss@3.4.19(yaml@2.8.2))':
     dependencies:
       mini-svg-data-uri: 1.4.4
-      tailwindcss: 3.4.18(yaml@2.8.2)
+      tailwindcss: 3.4.19(yaml@2.8.2)
 
-  '@tailwindcss/typography@0.5.16(tailwindcss@3.4.18(yaml@2.8.2))':
+  '@tailwindcss/typography@0.5.16(tailwindcss@3.4.19(yaml@2.8.2))':
     dependencies:
       lodash.castarray: 4.4.0
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       postcss-selector-parser: 6.0.10
-      tailwindcss: 3.4.18(yaml@2.8.2)
+      tailwindcss: 3.4.19(yaml@2.8.2)
 
   '@tanstack/virtual-core@3.10.8': {}
 
@@ -8394,15 +8381,6 @@ snapshots:
   glob-parent@6.0.2:
     dependencies:
       is-glob: 4.0.3
-
-  glob@10.4.5:
-    dependencies:
-      foreground-child: 3.3.1
-      jackspeak: 3.4.3
-      minimatch: 9.0.5
-      minipass: 7.1.2
-      package-json-from-dist: 1.0.1
-      path-scurry: 1.11.1
 
   glob@10.5.0:
     dependencies:
@@ -10074,7 +10052,7 @@ snapshots:
       postcss: 8.5.6
       postcss-value-parser: 4.2.0
       read-cache: 1.0.0
-      resolve: 1.22.10
+      resolve: 1.22.11
 
   postcss-js@4.1.0(postcss@8.5.6):
     dependencies:
@@ -10135,10 +10113,10 @@ snapshots:
 
   postcss-nesting@13.0.2(postcss@8.5.6):
     dependencies:
-      '@csstools/selector-resolve-nested': 3.1.0(postcss-selector-parser@7.1.0)
-      '@csstools/selector-specificity': 5.0.0(postcss-selector-parser@7.1.0)
+      '@csstools/selector-resolve-nested': 3.1.0(postcss-selector-parser@7.1.1)
+      '@csstools/selector-specificity': 5.0.0(postcss-selector-parser@7.1.1)
       postcss: 8.5.6
-      postcss-selector-parser: 7.1.0
+      postcss-selector-parser: 7.1.1
 
   postcss-normalize-charset@7.0.1(postcss@8.5.6):
     dependencies:
@@ -10208,11 +10186,6 @@ snapshots:
       util-deprecate: 1.0.2
 
   postcss-selector-parser@6.1.2:
-    dependencies:
-      cssesc: 3.0.0
-      util-deprecate: 1.0.2
-
-  postcss-selector-parser@7.1.0:
     dependencies:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
@@ -10467,12 +10440,6 @@ snapshots:
     dependencies:
       http-errors: 1.6.3
       path-is-absolute: 1.0.1
-
-  resolve@1.22.10:
-    dependencies:
-      is-core-module: 2.16.1
-      path-parse: 1.0.7
-      supports-preserve-symlinks-flag: 1.0.0
 
   resolve@1.22.11:
     dependencies:
@@ -10811,14 +10778,14 @@ snapshots:
       postcss: 8.5.6
       postcss-selector-parser: 7.1.1
 
-  sucrase@3.35.0:
+  sucrase@3.35.1:
     dependencies:
       '@jridgewell/gen-mapping': 0.3.13
       commander: 4.1.1
-      glob: 10.4.5
       lines-and-columns: 1.2.4
       mz: 2.7.0
       pirates: 4.0.7
+      tinyglobby: 0.2.15
       ts-interface-checker: 0.1.13
 
   superjson@2.2.6:
@@ -10858,7 +10825,7 @@ snapshots:
 
   tagged-tag@1.0.0: {}
 
-  tailwind-config-viewer@2.0.4(tailwindcss@3.4.18(yaml@2.8.2)):
+  tailwind-config-viewer@2.0.4(tailwindcss@3.4.19(yaml@2.8.2)):
     dependencies:
       '@koa/router': 12.0.2
       commander: 6.2.1
@@ -10868,13 +10835,13 @@ snapshots:
       open: 7.4.2
       portfinder: 1.0.37
       replace-in-file: 6.3.5
-      tailwindcss: 3.4.18(yaml@2.8.2)
+      tailwindcss: 3.4.19(yaml@2.8.2)
     transitivePeerDependencies:
       - supports-color
 
   tailwind-merge@2.6.0: {}
 
-  tailwindcss@3.4.18(yaml@2.8.2):
+  tailwindcss@3.4.19(yaml@2.8.2):
     dependencies:
       '@alloc/quick-lru': 5.2.0
       arg: 5.0.2
@@ -10896,8 +10863,8 @@ snapshots:
       postcss-load-config: 6.0.1(jiti@1.21.7)(postcss@8.5.6)(yaml@2.8.2)
       postcss-nested: 6.2.0(postcss@8.5.6)
       postcss-selector-parser: 6.1.2
-      resolve: 1.22.10
-      sucrase: 3.35.0
+      resolve: 1.22.11
+      sucrase: 3.35.1
     transitivePeerDependencies:
       - tsx
       - yaml
