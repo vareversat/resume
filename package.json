@@ -24,7 +24,7 @@
     "vue-router": "^4.4.5"
   },
   "devDependencies": {
-    "@nuxt/image": "^1.8.0",
+    "@nuxt/image": "^2.0.0",
     "@nuxtjs/color-mode": "^3.5.1",
     "autoprefixer": "^10.4.20",
     "nuxt-icon": "^0.6.10",
