@@ -65,7 +65,7 @@ const educations = [
     "diploma": "IT Engineer - ERASMUS Student",
     "from": "oct. 2020",
     "to": "feb. 2021",
-    "website": "https://www.agh.edu.pl/",
+    "website": "https://www.aghedu.pl/",
     "logo": "/images/agh.jpg",
     "description": "\n" +
       "During my final six months as a student at UTBM, I had the enriching opportunity to participate in the ERASMUS program, " +
@@ -103,7 +103,7 @@ const educations = [
     "logo": "/images/uca.jpg",
     "from": "2016",
     "to": "2018",
-    "website": "https://www.iut-clermont.fr/formations/dut-informatique/",
+    "website": "https://www.uca.fr/formation/nos-formations/par-ufr-ecoles-et-iut/iut-clermont-auvergne/but/but-informatique-clermont",
     "description": "During my university years, I held the position of Clerk in the student association. Additionally, I collaborated on various projects, including:\n" +
       "\n" +
       "A badge reader implementation for an enterprise restaurant management system, developed with four students. Technologies employed included C# (utilizing the WPF application with the MVVM architecture pattern and the MVVMLight framework), MySQL (PHPMyAdmin and APACHE for server hosting), and integration of a smart card reader API.\n" +
