@@ -1,32 +1,37 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  ssr: true,
+    modules: [
+        "@nuxt/ui",
+        "@nuxt/image",
+        "@nuxtjs/color-mode",
+        "@nuxt/icon"
+    ],
 
-  app: {
-      pageTransition: {name: 'page', mode: 'out-in'}
-  },
+    ui: {
+        theme: {
+            colors: ['primary', 'secondary', 'tertiary', 'info', 'success', 'warning', 'error']
+        }
+    },
 
-  devtools: {enabled: true},
-  css: ['~/assets/css/main.css'],
+    ssr: true,
 
-  postcss: {
-      plugins: {
-          tailwindcss: {},
-          autoprefixer: {},
-      },
-  },
+    app: {
+        pageTransition: {name: 'page', mode: 'out-in'}
+    },
 
-  colorMode: {
-      preference: 'system', // default value of $colorMode.preference
-      fallback: 'dark', // fallback value if not system preference found
-      hid: 'nuxt-color-mode-script',
-      globalName: '__NUXT_COLOR_MODE__',
-      componentName: 'ColorScheme',
-      classPrefix: '',
-      classSuffix: '',
-      storageKey: 'nuxt-color-mode'
-  },
+    devtools: {enabled: true},
 
-  modules: ["@nuxt/image", "@nuxt/content", "@nuxt/ui", "@nuxtjs/color-mode", "nuxt-icon"],
-  compatibilityDate: '2024-09-24'
+    css: ['~/assets/css/main.css'],
+
+
+    colorMode: {
+        preference: 'system', // default value of $colorMode.preference
+        fallback: 'dark', // fallback value if not system preference found
+        globalName: '__NUXT_COLOR_MODE__',
+        componentName: 'ColorScheme',
+        classPrefix: '',
+        classSuffix: '',
+        storageKey: 'nuxt-color-mode'
+    },
+    compatibilityDate: '2026-03-01'
 })

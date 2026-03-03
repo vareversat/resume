@@ -1,11 +1,13 @@
 <template>
-  <div class="flex flex-col items-center justify-center">
-    <NavBar/>
-    <NuxtLayout>
-      <NuxtPage/>
-    </NuxtLayout>
-    <Footer/>
-  </div>
+  <UApp>
+    <div class="flex flex-col items-center justify-center">
+      <NavBar/>
+      <NuxtLayout>
+        <NuxtPage/>
+      </NuxtLayout>
+      <Footer/>
+    </div>
+  </UApp>
 </template>
 
 <script setup lang="ts">

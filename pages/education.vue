@@ -17,7 +17,7 @@
                   <span>#{{ education.id }}</span>
                 </template>
                 <a :href="`#${education.id}`">
-                  <p class="text-2xl font-bold underline underline-offset-6 font-mono pb-2 cursor-pointer">
+                  <p class="text-2xl font-bold underline underline-offset-6  pb-2 cursor-pointer">
                     {{ education.diploma }}
                   </p>
                 </a>
@@ -25,20 +25,20 @@
             </div>
             <div class="flex items-center space-x-1 py-2">
               <Icon class="flex-none" name="i-material-symbols-location-on" size="2em" />
-              <p class="font-bold text-sm font-mono">{{ education.place_city }},
+              <p class="font-bold text-sm ">{{ education.place_city }},
                 {{ education.place_region }}, {{ education.place_country }}</p>
             </div>
           </div>
-          <p class="text-base text-justify font-mono">
+          <p class="text-base text-justify ">
             {{ education.description }}
           </p>
           <div class="flex items-start space-x-4 py-4">
             <div class="flex-auto">
-              <p class="text-4xl font-mono">
+              <p class="text-4xl ">
                 {{ education.to }}
               </p>
               <Icon class="basis-1/2 md:flex-none" name="i-system-uicons-arrow-up-circle" size="2em" />
-              <p class="text-4xl font-mono">
+              <p class="text-4xl ">
                 {{ education.from }}
               </p>
             </div>
