@@ -7,6 +7,11 @@ export default defineNuxtConfig({
         "@nuxt/icon"
     ],
 
+    sourcemap: {
+        client: false,
+        server: false // keep server sourcemaps if you want
+    },
+
     ui: {
         theme: {
             colors: ['primary', 'secondary', 'tertiary', 'info', 'success', 'warning', 'error']

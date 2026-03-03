@@ -138,7 +138,7 @@ const missions = [
     "country_icon": "i-circle-flags-fr",
     "map_link": "https://www.google.com/maps/place/25000+Besan%C3%A7on/@47.2463512,5.8814638,8.13z/data=!4m5!3m4!1s0x478d62faf0ee130b:0x409ce34b313ed30!8m2!3d47.237829!4d6.0240539",
     "company_name": "SKINsoft",
-    "company_logo": "/images/skinsoft.ico",
+    "company_logo": "/images/skinsoft.jpg",
     "link": "https://skinsoft.fr",
     "company_description": "Company that specializes in creating comprehensive web-based solutions tailored for managing collections effectively.",
     "sub_missions": [
