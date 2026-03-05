@@ -31,7 +31,7 @@ const profile = {
   "year_of_birth": "1997-04-22",
   "bio": "I'm Valentin REVERSAT, a SRE engineer living in Amsterdam 🌷, " +
       "Netherlands. I'm currently working at IMC, a high-frequency trading (HFT) firm. Welcome to my online resume ! You'll find plenty of " +
-      "information about me like my previous missions, my (forever) unfinished projects and my eduction background. Have a nice tour 📷",
+      "information about me like my previous missions, my (forever) unfinished projects and my education background. Have a nice tour 📷",
   "languages": [
     {"lang": "🇫🇷", "level": "Mother tongue"},
     {"lang": "🇬🇧", "level": "C1, fluent"}
