@@ -25,7 +25,7 @@ importers:
         version: 12.11.1
       ipx:
         specifier: ^3.1.1
-        version: 3.1.2(@parcel/watcher@2.5.6)(db0@0.3.4(better-sqlite3@12.11.1))(ioredis@5.11.1)(srvx@1.0.8)
+        version: 3.1.3(@parcel/watcher@2.5.6)(db0@0.3.4(better-sqlite3@12.11.1))(ioredis@5.11.1)(srvx@1.0.8)
       nuxt:
         specifier: ^4.3.1
         version: 4.6.3(@babel/plugin-syntax-jsx@7.29.7(@babel/core@7.29.7))(@babel/plugin-syntax-typescript@7.29.7(@babel/core@7.29.7))(@oxc-project/types@0.156.0)(@parcel/watcher@2.5.6)(@vue/compiler-sfc@3.5.44)(acorn@8.19.0)(better-sqlite3@12.11.1)(confbox@0.3.2)(db0@0.3.4(better-sqlite3@12.11.1))(dotenv@17.4.2)(esbuild@0.28.2)(giget@3.3.1)(ioredis@5.11.1)(lightningcss@1.33.0)(mlly@1.8.2)(oxc-parser@0.140.0)(rolldown@1.2.16)(rollup-plugin-visualizer@7.1.1(rolldown@1.2.16)(rollup@4.67.4))(rollup@4.67.4)(srvx@1.0.8)(terser@5.51.2)(typescript@5.9.3)(vite@8.3.5(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.0))(yaml@2.9.0)
@@ -561,8 +561,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@fastify/accept-negotiator@2.1.1':
-    resolution: {integrity: sha512-gO48sJ/4+P9hYE24tEoWQF4fZvCfRmStf6NFhuT5hwXkH+3JXGdemoE/7ympeQZglieeLJx256rbg8e58IrCyA==}
+  '@fastify/accept-negotiator@2.1.2':
+    resolution: {integrity: sha512-LV7MZqTwXTEt3GxBT6BU8ACztWnv++hSkMEsP3usIHiI0tA4F5EO4THhDCOr5J/ginM9DCnLCmZ6u3JLA9x8Iw==}
 
   '@floating-ui/core@1.8.0':
     resolution: {integrity: sha512-0CIZ5itps/8x7BG8dEIhs53BvCUH2PCoogtakwRTut+Arm58sJooJ0AuZhLw2HJYIR5cMLNPBSS728sPho2khQ==}
@@ -2684,8 +2684,8 @@ packages:
   crossws@0.3.5:
     resolution: {integrity: sha512-ojKiDvcmByhwa8YYqbQI/hg7MEU0NC03+pSdEq4ZUnZR9xXpwk7E43SMNGkn+JxJGPFtNvQ48+vV2p+P1ml5PA==}
 
-  crossws@0.4.15:
-    resolution: {integrity: sha512-NsUOpDZosz7nyI+qEIl05yaiXOWaXH2oTeM+XBWtiSWZtb5rzcIsl1AST/HzM2jzUn76eFuyrkn83E6iSBRUvw==}
+  crossws@0.4.17:
+    resolution: {integrity: sha512-YG2kyfafNXKmu7e6k64yrj6whrw7m5sBIsOSXOlJ/72X3TQWRQuw8DhvXFDcBk8HF77PnTSygnm7xpYCTnFpow==}
     peerDependencies:
       srvx: '>=0.11.5'
     peerDependenciesMeta:
@@ -3223,8 +3223,8 @@ packages:
     resolution: {integrity: sha512-ehuGcf94bQXhfagULNXrJdfnWO38v070jxSx/qE87Kjzmu2fU7ro5EFAb+OPituLqgfyuQaym5DlrNydW2sJ9A==}
     engines: {node: '>=12.22.0'}
 
-  ipx@3.1.2:
-    resolution: {integrity: sha512-9RzTAiZ3wJwCGqqeSl1vCizRAfhT9S2cMWG/mOW4t7e7Hyyu3PoYS8+GRWLb75qo1pVgs5CQapwrXherEWDt3A==}
+  ipx@3.1.3:
+    resolution: {integrity: sha512-smyFnmk13POce6nwF+BdwQ6vNt9U31QaC7EkNb1WSl9WYf22fVZ1uYd2WxtAvR9ir4ICnzVzW8RcpZ7EEcXyJQ==}
     hasBin: true
 
   ipx@4.1.0:
@@ -3714,8 +3714,8 @@ packages:
       encoding:
         optional: true
 
-  node-forge@1.4.0:
-    resolution: {integrity: sha512-LarFH0+6VfriEhqMMcLX2F7SwSXeWwnEAJEsYm5QKWchiVYVvJyV9v7UDvUv+w5HO23ZpQTXDv/GxdDdMyOuoQ==}
+  node-forge@1.4.2:
+    resolution: {integrity: sha512-rRtAR5XLJ8gCKd9du4qrKAsgCG1ObGP4gLeNJMa4vYSeq4bmBMOJk5IHkrviBV0q7uoAJlVd8HEQYQSVUb4FGQ==}
     engines: {node: '>= 6.13.0'}
 
   node-gyp-build@4.8.4:
@@ -4105,6 +4105,11 @@ packages:
 
   semver@7.8.5:
     resolution: {integrity: sha512-Y7/KDsb8LjooZpwaqGyulO6DQlksgCncchHGk+sZIY4SBvUocMBEFH5Ur1fI4dV+Jvl0w6cjvucaIi40puRioA==}
+    engines: {node: '>=10'}
+    hasBin: true
+
+  semver@7.8.6:
+    resolution: {integrity: sha512-9lpSSU4Mly3mrtruwLs1eLK6+gzbzqeBFwRNjIjE+9LuDpWdYctrQlQ3ej1Ilgi7gknpsTRnPoLP8DpCHqHIJw==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -4932,8 +4937,8 @@ packages:
     resolution: {integrity: sha512-c16PKLIRxBYpR3jSWsdS7SFp0COm5SOQdiFjY818dYFHJbMGuLBszpF07LBWmOS1uzrHa9VGdynsEgoeKy0oOQ==}
     engines: {node: '>=20'}
 
-  xss@1.0.15:
-    resolution: {integrity: sha512-FVdlVVC67WOIPvfOwhoMETV72f6GbW7aOabBC3WxN/oUdoEMDyLz4OgRv5/gck2ZeNqEQu+Tb0kloovXOfpYVg==}
+  xss@1.0.17:
+    resolution: {integrity: sha512-+SEr5IDSgTBnhT6bnnf0mVRHT91+HU517zkahLNhkWLz8retCgeR1YDT4OknLiExA5+chn2Wy7z3KyjvnD8A2w==}
     engines: {node: '>= 0.10.0'}
     hasBin: true
 
@@ -5415,7 +5420,7 @@ snapshots:
   '@esbuild/win32-x64@0.28.2':
     optional: true
 
-  '@fastify/accept-negotiator@2.1.1': {}
+  '@fastify/accept-negotiator@2.1.2': {}
 
   '@floating-ui/core@1.8.0':
     dependencies:
@@ -7748,7 +7753,7 @@ snapshots:
     dependencies:
       uncrypto: 0.1.3
 
-  crossws@0.4.15(srvx@1.0.8):
+  crossws@0.4.17(srvx@1.0.8):
     optionalDependencies:
       srvx: 1.0.8
 
@@ -8303,9 +8308,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  ipx@3.1.2(@parcel/watcher@2.5.6)(db0@0.3.4(better-sqlite3@12.11.1))(ioredis@5.11.1)(srvx@1.0.8):
+  ipx@3.1.3(@parcel/watcher@2.5.6)(db0@0.3.4(better-sqlite3@12.11.1))(ioredis@5.11.1)(srvx@1.0.8):
     dependencies:
-      '@fastify/accept-negotiator': 2.1.1
+      '@fastify/accept-negotiator': 2.1.2
       citty: 0.1.6
       consola: 3.4.2
       defu: 6.1.7
@@ -8319,7 +8324,7 @@ snapshots:
       svgo: 4.1.0
       ufo: 1.6.4
       unstorage: 1.17.6(db0@0.3.4(better-sqlite3@12.11.1))(ioredis@5.11.1)
-      xss: 1.0.15
+      xss: 1.0.17
     transitivePeerDependencies:
       - '@azure/app-configuration'
       - '@azure/cosmos'
@@ -8550,13 +8555,13 @@ snapshots:
       '@parcel/watcher-wasm': 2.6.0
       citty: 0.2.2
       consola: 3.4.2
-      crossws: 0.4.15(srvx@1.0.8)
+      crossws: 0.4.17(srvx@1.0.8)
       defu: 6.1.7
       get-port-please: 3.2.0
       h3: 1.15.11
       http-shutdown: 1.2.2
       jiti: 2.7.0
-      node-forge: 1.4.0
+      node-forge: 1.4.2
       pathe: 2.0.3
       std-env: 4.3.0
       tinyclip: 0.1.15
@@ -8846,7 +8851,7 @@ snapshots:
     dependencies:
       whatwg-url: 5.0.0
 
-  node-forge@1.4.0: {}
+  node-forge@1.4.2: {}
 
   node-gyp-build@4.8.4: {}
 
@@ -9459,6 +9464,8 @@ snapshots:
 
   semver@7.8.5: {}
 
+  semver@7.8.6: {}
+
   send@1.2.1:
     dependencies:
       debug: 4.4.3
@@ -9498,7 +9505,7 @@ snapshots:
     dependencies:
       '@img/colour': 1.1.0
       detect-libc: 2.1.2
-      semver: 7.8.5
+      semver: 7.8.6
     optionalDependencies:
       '@img/sharp-darwin-arm64': 0.34.5
       '@img/sharp-darwin-x64': 0.34.5
@@ -10262,7 +10269,7 @@ snapshots:
       is-wsl: 3.1.1
       powershell-utils: 0.2.1
 
-  xss@1.0.15:
+  xss@1.0.17:
     dependencies:
       commander: 2.20.3
       cssfilter: 0.0.10
